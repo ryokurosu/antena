@@ -36,7 +36,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('ping')->cron('0 2,14 * * * *');
+        $schedule->command('ping')->cron('0 4,16 * * * *');
         $schedule->command('article:maintenance')->weekly();
         $schedule->command('add:article')->cron('0 */3 * * * *');
         $schedule->command('add:access')->cron('0 */7 * * * *');
