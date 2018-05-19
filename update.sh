@@ -5,17 +5,19 @@ for filename in `find antena_* -maxdepth 0 -type d`
 do
 cd $filename
 echo $filename
-git stash
+git init
+git remote rm origin
+git remote add origin git://github.com/ryokurosu/antena.git
 git fetch origin
 git reset --hard origin/master
 git submodule init
 git submodule update -f
-git stash clear
 php artisan config:clear 
 composer update
 filepublic=${filename:7}
 cd -
 mv $filename/schedule.sh schedule.sh
+mv $filename/update.sh update.sh
 cd $filepublic
 echo $filepublic
 git init
