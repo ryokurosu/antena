@@ -6,7 +6,8 @@ do
 cd $filename
 echo $filename
 git stash
-git pull git://github.com/ryokurosu/antena.git
+git fetch origin
+git reset --hard origin/master
 git submodule init
 git submodule update -f
 git stash clear
@@ -22,7 +23,6 @@ git remote rm origin
 git remote add origin git://github.com/ryokurosu/public.git
 git fetch origin
 git reset --hard origin/master
-rm index.php
 mv index.php.template index.php
 sed -i -e "s/..\/vendor/..\/antena_$filepublic\/vendor/g" ./index.php
 sed -i -e "s/..\/bootstrap/..\/antena_$filepublic\/bootstrap/g" ./index.php
