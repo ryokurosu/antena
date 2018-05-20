@@ -103,7 +103,8 @@ class ArticleMaintenance extends Command
     // });
     //   noticeDiscord('article:maintenance');
     //   
-        // $article = \App\Article::orderBy('created_at','desc')->take(3000);
+        // $article = \App\Article::orderBy('created_at','desc')->take(10000);
+        // $popular_article = \App\Article::orderBy('view','desc')->take(1000);
         // $files = \File::files(public_path('images/'));
         // $output = "";
         // $delete_list = [];
