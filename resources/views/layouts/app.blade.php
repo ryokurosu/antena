@@ -188,12 +188,12 @@
                            <div class="padding-wrap">
                             <div class="col-xs-3 thumbnail">
                               <a class="thumbnail-link" href="https://masakuraudo2.com/archives/2051">
-                                <img src="https://d2dcan0armyq93.cloudfront.net/photo/odai/600/9c06b4c415a1a864059861d99085a292_600.jpg" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...">
+                                <img src="https://masakuraudo2.com/wp-content/uploads/2018/05/bra-2306600_640.jpg" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...">
                               </a>
                             </div>
                             <div class="col-xs-9 title">
                               <a class="title-link" href="https://masakuraudo2.com/archives/2051">
-                               看護師・介護士のセクハラ被害の実態...
+                               看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...
                              </a>
                              <a class="description-link">
                               @php
