@@ -5,22 +5,26 @@ for filename in `find antena_* -maxdepth 0 -type d`
 do
 cd $filename
 echo $filename
+if [ $(LANG=C date '+%a%H') == "Sat23" ]; then
+echo public/images/* | xargs rm
+echo public/thumbnail/* | xargs rm
+fi
+cd public
+~/opt/bin/git fetch origin
+~/opt/bin/git reset --hard origin/master
+cd ..
 ~/opt/bin/git init
 ~/opt/bin/git remote rm origin
 ~/opt/bin/git remote add origin git://github.com/ryokurosu/antena.git
 ~/opt/bin/git fetch origin
 ~/opt/bin/git reset --hard origin/master
-~/opt/bin/git submodule init
-~/opt/bin/git submodule sync
-~/opt/bin/git submodule foreach "(~/opt/bin/git checkout master; ~/opt/bin/git pull)"
+~/opt/bin/git submodule foreach git pull origin master
 ~/opt/bin/git submodule update
 /usr/bin/php7.1 artisan cache:clear
 /usr/bin/php7.1 artisan config:clear
 /usr/bin/php7.1 artisan route:clear
 /usr/bin/php7.1 artisan view:clear
 filepublic=${filename:7}
-find public/images/* -type f -not -name "noimage.jpg" -mtime +7 | xargs -n 300 rm
-find public/thumbnail/* -type f -not -name "noimage.jpg" -mtime +7 | xargs -n 300 rm
 cd -
 /usr/bin/mv $filename/schedule.sh schedule.sh
 /usr/bin/mv $filename/update.sh update.sh
