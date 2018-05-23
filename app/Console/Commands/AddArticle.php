@@ -147,6 +147,9 @@ class AddArticle extends Command
       'description' => $description,
       'thumbnail' => $imageName,
     ])->save();
+    if($article->id % 2000 == 0){
+      \Artisan::call('ping');
+    }
     $this->count++;
 
   }
