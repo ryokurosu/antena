@@ -34,7 +34,7 @@ class Article extends Model implements Feedable
 
 
 	public function scopeLatest($query){
-		return $query->orderBy('updated_at','desc');
+		return $query->orderBy('id','desc');
 	}
 	public function scopePopular($query){
 		return $query->orderBy('view','desc');

@@ -22,50 +22,44 @@
 
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <meta property="og:title" content="@yield('title')">
+  <meta name="twitter:title" content="@yield('title')">
+  <meta property="og:description" content="@yield('description')">
+  <meta name="twitter:description" content="@yield('description')">
+  <meta name="description" content="@yield('description')">
+  <meta property="og:url" content="{{url()->current()}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{config('app.name', 'Laravel')}}">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="@yield('image',url('/thumbnail.jpg'))">
+  <meta name="twitter:url" content="{{url()->current()}}">
+  <meta name="twitter:image" content="@yield('image',url('/thumbnail.jpg'))">
+  <meta name="theme-color" content="#166fff">
+  <link rel="canonical" href="{{url()->current()}}">
+  <link rel="alternate" hreflang="ja" href="{{url()->current()}}">
+  <link rel="alternate" type="application/atom+xml" title="News" href="{{url('/feed')}}">
 
-  <!--   <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script> -->
+  <link rel="icon" href="{{url('/favicon.ico')}}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{url('/apple-touch-icon.png')}}" sizes="180x180">
+  <link rel="icon" href="{{url('/favicon.png')}}" sizes="192x192">
 
-    <meta property="og:title" content="@yield('title')">
-    <meta name="twitter:title" content="@yield('title')">
-    <meta property="og:description" content="@yield('description')">
-    <meta name="twitter:description" content="@yield('description')">
-    <meta name="description" content="@yield('description')">
-    <meta property="og:url" content="{{url()->current()}}">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{config('app.name', 'Laravel')}}">
-    <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="@yield('image',url('/thumbnail.jpg'))">
-    <meta name="twitter:url" content="{{url()->current()}}">
-    <meta name="twitter:image" content="@yield('image',url('/thumbnail.jpg'))">
-    <link rel="canonical" href="{{url()->current()}}">
-    <link rel="alternate" hreflang="ja" href="{{url()->current()}}">
-    <link rel="alternate" type="application/atom+xml" title="News" href="{{url('/feed')}}">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{env('GA_TAG')}}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <link rel="icon" href="{{url('/favicon.ico')}}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{url('/apple-touch-icon.png')}}" sizes="180x180">
-    <link rel="icon" href="{{url('/favicon.png')}}" sizes="192x192">
-    <meta name="theme-color" content="#166fff">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{env('GA_TAG')}}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', '{{env("GA_TAG")}}');
-    </script>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-5105681373982866",
-      enable_page_level_ads: true
-    });
+    gtag('config', '{{env("GA_TAG")}}');
   </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+   (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5105681373982866",
+    enable_page_level_ads: true
+  });
+</script>
 
 
 </head>
@@ -148,7 +142,7 @@
                         </div> -->
                         <ul class="list-group">
                           <li class="list-group-item active">人気記事</li>
-                          @foreach(\App\Article::popular()->take(10)->cursor() as $article)
+                          @foreach(\App\Article::popular()->take(5)->cursor() as $article)
                           @if($loop->iteration == 1)
                           <li class="list-group-item">
                            <div class="padding-wrap">
@@ -269,7 +263,7 @@
                         </div>
                       -->
                       <li class="list-group-item active">新着記事</li>
-                      @foreach(\App\Article::latest()->take(10)->cursor() as $article)
+                      @foreach(\App\Article::latest()->take(5)->cursor() as $article)
                       <li class="list-group-item" itemscope itemtype="http://schema.org/Article">
                         <div class="padding-wrap">
                           <div class="col-xs-3 thumbnail">
@@ -316,7 +310,7 @@
                     <li class="list-group-item active">タグ</li>
                   </ul>
                   <div id="tag-area">
-                    @foreach(\App\Word::inRandomOrder()->take(200)->cursor() as $word)
+                    @foreach(\App\Word::inRandomOrder()->take(100)->cursor() as $word)
                     <a class="tag" href="{{$word->path()}}">{{$word->text}}</a>
                     @endforeach
                   </div>
