@@ -24,41 +24,102 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id = null)
+    public function index(Request $request,$id = null)
     {
+        $parse_url = $this->parseUrl($request->url());
+        $is_amp = $this->isAmp($parse_url);
+        // canonical設定用URL
+        $canonical_url = $this->getCanonicalUrl($request->url());
+
+
         $articles = Article::latest()->with('word')->paginate(12);
         if($id){
             $detail = Article::findOrFail($id);
-            return view('article',[
-                'articles' => $articles,
-                'detail' => $detail,
-            ]);
+            $ret = [
+               'canonical_url' => $canonical_url,
+               'articles' => $articles,
+               'detail' => $detail,
+           ];
+           if($is_amp) {
+              return view('amp.article',$ret);
+          } else {
+             return view('article',$ret);
+         }
+     }else{
+        $ret = [
+           'canonical_url' => $canonical_url,
+           'articles' => $articles,
+       ];
+       if($is_amp) {
+          return view('amp.article',$ret);
+      } else {
+         return view('article',$ret);
+     }
+ }
+}
 
-        }else{
-            return view('article',[
-                'articles' => $articles
-            ]);
-        }
-    }
+public function page(Request $request,$id){
+    $parse_url = $this->parseUrl($request->url());
+    $is_amp = $this->isAmp($parse_url);
+        // canonical設定用URL
+    $canonical_url = $this->getCanonicalUrl($request->url());
 
-    public function page($id){
-     $article = Article::findOrFail($id);
-     $article->increment('view',rand(1,3));
-     $twitters = Twitter::where('article_id',$id)->take(10)->cursor();
-     $articles = Article::where('word_id',$article->word->id)->take(10)->cursor();
-     return view('page',[
+
+
+    $article = Article::findOrFail($id);
+    $article->increment('view',rand(1,3));
+    $twitters = Twitter::where('article_id',$id)->take(10)->cursor();
+    $articles = Article::where('word_id',$article->word->id)->take(10)->cursor();
+
+    $ret = [
+        'canonical_url' => $canonical_url,
         'detail' => $article,
         'articles' => $articles,
         'twitters' => $twitters
-    ]);
+    ];
+    if($is_amp) {
+        return view('amp.page',$ret);
+    } else {
+     return view('page',$ret);
  }
+}
 
- public function word($id){
+public function word(Request $request,$id){
+    $parse_url = $this->parseUrl($request->url());
+    $is_amp = $this->isAmp($parse_url);
+        // canonical設定用URL
+    $canonical_url = $this->getCanonicalUrl($request->url());
+
     $word = Word::findOrFail($id);
     $articles = Article::where('word_id',$id)->latest()->with('word')->paginate(12);
-    return view('article',[
+    $ret = [
+        'canonical_url' => $canonical_url,
         'articles' => $articles,
         'word' => $word
-    ]);
+    ];
+    if($is_amp) {
+        return view('amp.article',$ret);
+    } else {
+     return view('article',$ret);
+ }
 }
+private function parseUrl($url) {
+    return parse_url($url);
+}
+private function isAmp($parse_url) {
+
+    if(isset($parse_url['path']) && strpos($parse_url['path'],'.amp') !== false){
+      return true;
+  } else {
+      return false;
+  }
+}
+private function getCanonicalUrl($url) {
+    if(strpos($url,'.amp') !== false){
+      return str_replace('.amp', '', $url);
+  } else {
+      return sprintf('%s.amp', $url);
+  }
+}
+
 }

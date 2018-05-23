@@ -4,6 +4,7 @@
 @section('breadcrumbs')
 {{ Breadcrumbs::render('home') }}
 @stop
+@section('amp'){{url('/index.amp')}}@stop
 
 @isset($detail)
 @section('title',$detail->title)

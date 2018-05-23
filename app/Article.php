@@ -19,13 +19,18 @@ class Article extends Model implements Feedable
 	public function thumbnailPath(){
 		return env('APP_IMAGE').'thumbnail/'.$this->thumbnail;
 	}
-
 	public function path(){
 		return url('/article/'.$this->id);
+	}
+	public function ampPath(){
+		return url('/article/'.$this->id.'.amp');
 	}
 
 	public function listpath(){
 		return url('/article/list/'.$this->id);
+	}
+	public function ampListpath(){
+		return url('/article/list/'.$this->id.'.amp');
 	}
 
 	public function word(){

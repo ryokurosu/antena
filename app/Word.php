@@ -22,4 +22,7 @@ class Word extends Model
 	public function path(){
 		return url('/word/'.$this->id);
 	}
+	public function ampPath(){
+		return url('/word/'.$this->id.'.amp');
+	}
 }
