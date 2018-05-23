@@ -31,7 +31,7 @@ sed -i -e "s/PROJECTNAME/$PROJECTNAME/g" ./.env
 sed -i -e "s/GOOGLETAG/$GOOGLETAG/" ./.env
 php artisan key:generate
 php artisan migrate
-php artisan get:start
+nohup php artisan get:start &
 echo "ワードを設定してください。"
 read WORD
 php artisan add:word $WORD true
