@@ -1,0 +1,1 @@
+rm `ls -t public/images/* | grep -v "noimage.jpg" | tail -n+51` 2> /dev/null

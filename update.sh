@@ -19,6 +19,8 @@ echo $filename
 /usr/bin/php7.1 artisan route:clear
 /usr/bin/php7.1 artisan view:clear
 filepublic=${filename:7}
+rm `ls -t public/images/* | grep -v "noimage.jpg" | tail -n+3001` 2> /dev/null
+rm `ls -t public/thumbnail/* | grep -v "noimage.jpg" | tail -n+3001` 2> /dev/null
 cd -
 mv $filename/schedule.sh schedule.sh
 mv $filename/update.sh update.sh
