@@ -13,6 +13,7 @@ echo $filename
 ~/opt/bin/git submodule init
 ~/opt/bin/git submodule sync
 ~/opt/bin/git submodule foreach "(git checkout master; git pull)"
+~/opt/bin/git submodule update
 php artisan cache:clear
 php artisan config:clear
 php artisan route:clear
