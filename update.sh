@@ -14,10 +14,10 @@ echo $filename
 ~/opt/bin/git submodule sync
 ~/opt/bin/git submodule foreach "(git checkout master; git pull)"
 ~/opt/bin/git submodule update
-php artisan cache:clear
-php artisan config:clear
-php artisan route:clear
-php artisan view:clear
+/usr/bin/php7.1 artisan cache:clear
+/usr/bin/php7.1 artisan config:clear
+/usr/bin/php7.1 artisan route:clear
+/usr/bin/php7.1 artisan view:clear
 filepublic=${filename:7}
 cd -
 mv $filename/schedule.sh schedule.sh
