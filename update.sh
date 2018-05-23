@@ -19,8 +19,8 @@ echo $filename
 /usr/bin/php7.1 artisan route:clear
 /usr/bin/php7.1 artisan view:clear
 filepublic=${filename:7}
-find public/images/* -type f -not -name "noimage.jpg" -mtime +7 -exec rm -f {} \;
-find public/thumbnail/* -type f -not -name "noimage.jpg" -mtime +7 -exec rm -f {} \;
+find public/images/* -type f -not -name "noimage.jpg" -mtime +7 | xargs -n 300 rm
+find public/thumbnail/* -type f -not -name "noimage.jpg" -mtime +7 | xargs -n 300 rm
 cd -
 /usr/bin/mv $filename/schedule.sh schedule.sh
 /usr/bin/mv $filename/update.sh update.sh
