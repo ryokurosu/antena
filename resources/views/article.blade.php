@@ -13,6 +13,7 @@
 @section('breadcrumbs')
 {{ Breadcrumbs::render('list',$detail) }}
 @overwrite
+@section('amp'){{url()->current().'.amp'}}@overwrite
 @endisset
 
 @isset($word)
@@ -21,6 +22,7 @@
 @section('breadcrumbs')
 {{ Breadcrumbs::render('word',$word) }}
 @overwrite
+@section('amp'){{url()->current().'.amp'}}@overwrite
 @endisset
 
 @section('content')
