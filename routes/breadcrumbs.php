@@ -14,7 +14,6 @@ Breadcrumbs::register('word', function ($breadcrumbs,$word) {
 // Home > [article] 
 Breadcrumbs::register('page', function ($breadcrumbs, $article) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('記事一覧', route('article.list',$article->id));
     $breadcrumbs->push($article->title, route('article.page', $article->id));
 });
 

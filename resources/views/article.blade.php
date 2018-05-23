@@ -30,21 +30,20 @@
   <ul class="list-group">
     @foreach($articles as $article)
     <li class="list-group-item" itemscope itemtype="http://schema.org/Article">
-      <div class="padding-wrap">
         <div class="col-xs-3 thumbnail">
-          <a class="thumbnail-link" href="{{$article->path()}}">
+          <a href="{{$article->path()}}">
             <img src="{{$article->thumbnailPath()}}" alt="{{$article->title}}">
           </a>
         </div>
         <div class="col-xs-9 title">
-          <a class="title-link" href="{{$article->path()}}" itemprop="name">
+          <a href="{{$article->path()}}" itemprop="name">
            {{$article->title}}
          </a>
-         <a class="description-link">
+         <p class="text-muted description">
           @php
           echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
           @endphp
-        </a>
+        </p>
       </div>
       <div class="clear"></div>
       <div class="col-xs-12 cat">
@@ -59,7 +58,6 @@
         <a href="{{$article->path()}}" class="link-btn">サイトへ</a>
       </div>
       <span class="view">{{$article->view}} view</span>
-    </div>
   </li>
   @endforeach
 </ul>
