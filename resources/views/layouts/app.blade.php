@@ -37,7 +37,7 @@
 <meta name="twitter:url" content="{{url()->current()}}">
 <meta name="twitter:image" content="@yield('image',url('/thumbnail.jpg'))">
 <meta name="theme-color" content="#166fff">
-<link rel="amphtml" href="{{url()->current().'.amp'}}">
+<link rel="amphtml" href="@yield('amp',url()->current().'.amp')">
 <link rel="canonical" href="{{url()->current()}}">
 <link rel="alternate" hreflang="ja" href="{{url()->current()}}">
 <link rel="alternate" type="application/atom+xml" title="News" href="{{url('/feed')}}">
