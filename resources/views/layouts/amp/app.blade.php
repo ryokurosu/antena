@@ -16,21 +16,6 @@
 	<script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 	<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 	<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-	<amp-analytics type="googleanalytics">
-		<script type="application/json">
-			{
-				{
-					"vars": {
-					"account": "{{env("GA_TAG")}}"  
-				},
-				"triggers": {
-				"trackPageview": { 
-				"on": "visible", 
-				"request": "pageview" 
-			}
-		}
-	</script>
-	</amp-analytics>
 	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<link rel="canonical" href="@yield('canonical')">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,6 +54,21 @@
 </head>
 <body>
 	<amp-auto-ads type="adsense" data-ad-client="ca-pub-5105681373982866"></amp-auto-ads>
+	<amp-analytics type="googleanalytics">
+		<script type="application/json">
+			{
+				{
+					"vars": {
+					"account": "{{env("GA_TAG")}}"  
+				},
+				"triggers": {
+				"trackPageview": { 
+				"on": "visible", 
+				"request": "pageview" 
+			}
+		}
+	</script>
+	</amp-analytics>
 	<div id="app">
 		<nav class="navbar navbar-default navbar-static-top">
 			<div class="container">
