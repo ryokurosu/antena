@@ -12,7 +12,7 @@ echo $filename
 ~/opt/bin/git reset --hard origin/master
 ~/opt/bin/git submodule init
 ~/opt/bin/git submodule sync
-~/opt/bin/git submodule foreach "(git checkout master; git pull)"
+~/opt/bin/git submodule foreach "(~/opt/bin/git checkout master; ~/opt/bin/git pull)"
 ~/opt/bin/git submodule update
 /usr/bin/php7.1 artisan cache:clear
 /usr/bin/php7.1 artisan config:clear
