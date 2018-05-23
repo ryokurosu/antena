@@ -12,7 +12,6 @@
 <html amp>
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 	<meta charset="utf-8">
-	<script async src="https://cdn.ampproject.org/v0.js"></script>
 	<link rel="canonical" href="@yield('canonical')">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -50,8 +49,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
 <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
-<script async custom-element="amp-analytics"
-src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <amp-analytics type="googleanalytics">
 	<script type="application/json">
 		{
@@ -67,6 +65,7 @@ src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 	}
 </script>
 </amp-analytics>
+<script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
 	<amp-auto-ads type="adsense" data-ad-client="ca-pub-5105681373982866"></amp-auto-ads>
