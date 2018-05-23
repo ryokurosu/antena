@@ -11,6 +11,7 @@
 
 
 @section('content')
+
 <div class="panel panel-default" itemscope itemtype="http://schema.org/Article">
   <div class="panel-heading"><h1 itemprop="name">{{$detail->title}}</h1></div>
   <div class="panel-body">
@@ -55,7 +56,7 @@
               <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">{{'@mama_nerse'}}</a></p>
               <p><a style="text-decoration: underline;" href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</p>
               </li>
-              @foreach($detail->twitters as $tweet)
+              @foreach($twitters as $tweet)
               <li class="list-group-item">
                 <p><a href="{{$tweet->userLink()}}" rel="nofollow" target="_blank">{{'@'}}{{$tweet->user_id}}</a></p>
                 <p>{{$tweet->text}}</p>

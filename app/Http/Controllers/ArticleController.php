@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Twitter;
 use App\Word;
 
 class ArticleController extends Controller
@@ -41,24 +42,23 @@ class ArticleController extends Controller
     }
 
     public function page($id){
+     $article = Article::findOrFail($id);
+     $article->increment('view',rand(1,3));
+     $twitters = Twitter::where('article_id',$id)->take(10)->cursor();
+     $articles = Article::where('word_id',$article->word->id)->take(10)->cursor();
+     return view('page',[
+        'detail' => $article,
+        'articles' => $articles,
+        'twitters' => $twitters
+    ]);
+ }
 
-        $article = Article::with('twitters')->findOrFail($id);
-        $article->increment('view',rand(1,3));
-        $word = $article->word;
-
-        $articles = Article::where('word_id',$word->id)->take(10)->cursor();
-        return view('page',[
-            'detail' => $article,
-            'articles' => $articles
-        ]);
-    }
-
-    public function word($id){
-        $word = Word::findOrFail($id);
-        $articles = Article::where('word_id',$word->id)->latest()->with('word')->paginate(12);
-        return view('article',[
-            'articles' => $articles,
-            'word' => $word
-        ]);
-    }
+ public function word($id){
+    $word = Word::findOrFail($id);
+    $articles = Article::where('word_id',$id)->latest()->with('word')->paginate(12);
+    return view('article',[
+        'articles' => $articles,
+        'word' => $word
+    ]);
+}
 }
