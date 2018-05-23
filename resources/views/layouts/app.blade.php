@@ -112,7 +112,7 @@
                           <li class="list-group-item">
                             <div class="col-xs-3 thumbnail">
                               <a href="https://lim-jp.com/archives/449">
-                                <img src="{{url('/uydagfea.jpg'}}" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...">
+                                <img src="{{url('/uydagfea.jpg')}}" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...">
                               </a>
                             </div>
                             <div class="col-xs-9 title">
