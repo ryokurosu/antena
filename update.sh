@@ -13,7 +13,7 @@ echo $filename
 ~/opt/bin/git submodule init
 ~/opt/bin/git submodule sync
 ~/opt/bin/git submodule foreach "(git checkout master; git pull)"
-php artisan config:clear 
+php artisan key:generate 
 filepublic=${filename:7}
 cd -
 mv $filename/schedule.sh schedule.sh
