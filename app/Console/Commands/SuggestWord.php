@@ -67,6 +67,22 @@ class SuggestWord extends Command
               }
             }
           });
+
+          $client = new Client();
+          $sitemap = $client->request('GET',"http://kizasi.jp/kizapi.py?span=24&kw_expr=".urlencode($word->text)."&type=coll");
+          $sitemap->filter('item title')->each(function($node) use (&$wordlist){
+            $attr = $node->text();
+            foreach(explode(' ',$attr) as $w){
+              try{
+                if(!Word::where('text',$w)->first()){
+                  \Artisan::call('add:word',['text' => $w]);
+                  $wordlist .= $w . PHP_EOL;
+                }
+              }catch(Exception $e){
+                continue;
+              }
+            }
+          });
         } catch (Exception $e) {
           postToDiscord($e);
           continue;
