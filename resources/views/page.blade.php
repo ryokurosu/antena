@@ -31,7 +31,9 @@
     </div>
     <div class="link-wrap">
       <p class="text-center">スポンサーリンク</p>
-      @yield('link-ad')
+      <div class="text-center">
+        @yield('link-ad')
+      </div>
       <p>
         <a href="https://koikatsu.mykoi.jp/" rel="nofollow" target="_blank">[PR][無料]恋愛や婚活に悩める女性がいい出会いを得るために今すぐ見るべきサイトはこちら</a>
       </p>
