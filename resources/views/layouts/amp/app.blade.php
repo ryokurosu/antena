@@ -48,6 +48,7 @@
 <link rel="icon" href="{{url('/favicon.png')}}" sizes="192x192">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 <script async custom-element="amp-analytics"
 src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 <amp-analytics type="googleanalytics">
@@ -65,7 +66,6 @@ src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
 	}
 </script>
 </amp-analytics>
-<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
 </head>
 <body>
 	<amp-auto-ads type="adsense" data-ad-client="ca-pub-5105681373982866"></amp-auto-ads>
