@@ -28,7 +28,7 @@ sed -i -e "s/DATABASE_HOST/$DATABASE_HOST/g" ./.env
 sed -i -e "s/DATABASE_PREFIX/$DATABASE_PREFIX/g" ./.env
 sed -i -e "s/SITENAME/$SITENAME/g" ./.env
 sed -i -e "s/PROJECTNAME/$PROJECTNAME/g" ./.env
-sed -i -e "s/GA_TAG=.*/GA_TAG=$GOOGLETAG/" ./.env
+sed -i -e "s/GOOGLETAG/$GOOGLETAG/" ./.env
 php artisan key:generate
 php artisan migrate
 php artisan get:start
