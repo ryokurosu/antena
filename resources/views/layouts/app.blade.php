@@ -112,7 +112,7 @@
                           <li class="list-group-item">
                             <div class="col-xs-3 thumbnail">
                               <a href="https://lim-jp.com/archives/449">
-                                <img src="https://top.tsite.jp/static/top/sys/contents_image/036/631/669/36631669_107803.jpg" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...">
+                                <img src="{{url('/uydagfea.jpg'}}" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...">
                               </a>
                             </div>
                             <div class="col-xs-9 title">
@@ -143,7 +143,7 @@
                         <li class="list-group-item">
                           <div class="col-xs-3 thumbnail">
                             <a href="https://masakuraudo2.com/archives/2051">
-                              <img src="https://masakuraudo2.com/wp-content/uploads/2018/05/bra-2306600_640.jpg" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...">
+                              <img src="{{url('/ufahefiah.jpg')}}" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...">
                             </a>
                           </div>
                           <div class="col-xs-9 title">
