@@ -1,12 +1,10 @@
 @section('link-ad')
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Atenaレスポンシブ -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5105681373982866"
-     data-ad-slot="9120017835"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<amp-ad width="100vw" height=320
+  type="adsense"
+  data-ad-client="ca-pub-5105681373982866"
+  data-ad-slot="9120017835"
+  data-auto-format="rspv"
+  data-full-width>
+    <div overflow></div>
+</amp-ad>
 @stop
