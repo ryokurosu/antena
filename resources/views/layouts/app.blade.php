@@ -107,7 +107,7 @@
                         </div> -->
                         <ul class="list-group">
                           <li class="list-group-item active">人気記事</li>
-                          @foreach(\App\Article::popular()->take(3)->cursor() as $article)
+                          @foreach(\App\Article::popular()->take(5)->cursor() as $article)
                           @if($loop->iteration == 1)
                           <li class="list-group-item">
                             <div class="col-xs-3 thumbnail">
