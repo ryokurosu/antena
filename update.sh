@@ -13,10 +13,10 @@ echo $filename
 ~/opt/bin/git submodule init
 ~/opt/bin/git submodule sync
 ~/opt/bin/git submodule foreach "(git checkout master; git pull)"
-composer dump-autoload
-php artisan clear-compiled
-php artisan optimize
-php artisan config:cache
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
 filepublic=${filename:7}
 cd -
 mv $filename/schedule.sh schedule.sh
