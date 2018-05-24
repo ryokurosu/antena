@@ -16,14 +16,7 @@
   <div class="panel-heading"><h1 itemprop="name">{{$detail->title}}</h1></div>
   <div class="panel-body">
     <div class="thumbnail-wrap">
-      <img src="{{$detail->imagePath()}}" alt="{{$detail->title}}" itemprop="image">
-    </div>
-    <div class="block">
-      <span class="cat-domain">作成：</span>
-      <span class="cat-domain" itemprop="datePublished">{{$detail->created_at->format("Y-m-d")}}</span> 
-      <span class="cat-domain">更新：</span>
-      <span class="cat-domain" itemprop="dateModified">{{$detail->updated_at->format("Y-m-d")}}</span>
-      <span class="cat-domain" itemprop="author">{{parse_url($detail->url, PHP_URL_HOST)}}</span>
+      <img src="{{$detail->imagePath()}}" alt="{{$detail->title}}">
     </div>
     <div class="block">
       <p>
@@ -33,7 +26,7 @@
         <a href="https://uranai-cafe.jp/animal/" rel="nofollow" target="_blank">[PR]動物キャラ占い(無料)で、あなたの性格・恋愛傾向・毎日の運勢・今後の人生の運気がわかります。</a>
       </p>
     </div>
-    <div class="meta-wrap" itemprop="headline">
+    <div class="meta-wrap">
       <p>{{$detail->description}}</p>
     </div>
     <div class="link-wrap">
@@ -50,9 +43,6 @@
       <p>
         <a href="http://daigakuzyuken-pro.com/" rel="nofollow" target="_blank">[PR]あの「受験の神様」も使っている勉強法を難関大学合格者が毎週更新中</a>
       </p>
-    </div>
-    <div class="block" itemprop="publisher" itemscope itemtype=”https://schema.org/Organization">
-      <img itemprop="logo" src="{{url('/logo24.png')}}" />  <a class="text-muted" itemprop="url" href="{{url('/')}}">{{config('app.name')}}</a>
     </div>
     <div id="tweet-list">
       <ul class="list-group noback">
@@ -143,17 +133,17 @@
           <span class="view">{{$article->view}} view</span>
         </li>
         @endif
-        <li class="list-group-item" itemscope itemtype="http://schema.org/Article">
+        <li class="list-group-item"  itemscope itemtype="http://schema.org/Article">
           <div class="col-xs-3 thumbnail">
             <a href="{{$article->path()}}">
-              <img src="{{$article->thumbnailPath()}}" alt="{{$article->title}}" itemprop="image">
+              <img src="{{$article->thumbnailPath()}}" alt="{{$article->title}}">
             </a>
           </div>
           <div class="col-xs-9 title">
             <a href="{{$article->path()}}" itemprop="name">
              {{$article->title}}
            </a>
-           <p class="text-muted description" itemprop="headline">
+           <p class="text-muted description">
             @php
             echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
             @endphp
@@ -161,31 +151,25 @@
         </div>
         <div class="clear"></div>
         <div class="col-xs-12 cat">
-         <span class="cat-item" itemprop="publisher">
-          {{$article->word->text}}
-        </span>
-        <span class="cat-domain" itemprop="datePublished">
-         {{$article->created_at->format("Y-m-d")}}
-       </span>
-       <span class="cat-domain" itemprop="author">
-        @php
-        echo parse_url($article->url, PHP_URL_HOST);
-        @endphp
-      </span>
-      <a href="{{$article->path()}}" class="link-btn">サイトへ</a>
-      <div itemprop="publisher" itemscope itemtype=”https://schema.org/Organization">
-      <img itemprop="logo" src="{{url('/logo24.png')}}" />  <a class="cat-domain" itemprop="url" href="{{url('/')}}">{{config('app.name')}}</a>
-    </div>
-    </div>
-    <span class="view">{{$article->view}} view</span>
-  </li>
-  @endforeach
-</ul>
+          <span class="cat-item">
+            {{$article->word->text}}
+          </span>
+          <span class="cat-domain" itemprop="author">
+            @php
+            echo parse_url($article->url, PHP_URL_HOST);
+            @endphp
+          </span>
+          <a href="{{$article->path()}}" class="link-btn">サイトへ</a>
+        </div>
+        <span class="view">{{$article->view}} view</span>
+      </li>
+      @endforeach
+    </ul>
 
-<div class="meta-wrap block">
-  <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
-</div>
+    <div class="meta-wrap block">
+      <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
+    </div>
 
-</div>
+  </div>
 </div>
 @endsection
