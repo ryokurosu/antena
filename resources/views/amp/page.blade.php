@@ -57,7 +57,7 @@
             </li>
             <li class="list-group-item">
               <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">{{'@mama_nerse'}}</a></p>
-              <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</p>
+              <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</a></p>
               </li>
               @foreach($twitters as $tweet)
               <li class="list-group-item">

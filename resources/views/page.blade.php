@@ -62,14 +62,11 @@
             </li>
             <li class="list-group-item">
               <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">{{'@mama_nerse'}}</a></p>
-              <p><a style="text-decoration: underline;" href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</p>
+              <p><a style="text-decoration: underline;" href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</a></p>
               </li>
+              <p class="text-center">この記事に対するTwitterでの反応</p>
               @foreach($twitters as $tweet)
-              <li class="list-group-item">
-                <p><a href="{{$tweet->userLink()}}" rel="nofollow" target="_blank">{{'@'}}{{$tweet->user_id}}</a></p>
-                <p>{{$tweet->text}}</p>
-                <span class="time"><a href="{{$tweet->tweetLink()}}" rel="nofollow" target="_blank">{{$tweet->updated_at->format('Y/n/j H:i:s')}}</a></span>
-              </li>
+              <blockquote class="twitter-tweet" data-lang="ja"><a href="{{$tweet->tweetLink()}}"></a></blockquote>
               @endforeach
             </ul>
           </div>

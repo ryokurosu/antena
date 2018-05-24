@@ -74,7 +74,7 @@
     amzn_assoc_region = "JP";
 </script>
 <script src="//ws-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=JP"></script>
-
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
 	<div id="app">
