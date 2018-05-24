@@ -19,7 +19,6 @@
       <img src="{{$detail->imagePath()}}" alt="{{$detail->title}}" itemprop="image">
     </div>
     <div class="block">
-      <span class="cat-item" itemprop="publisher" itemscope itemtype=”https://schema.org/Person>{{$detail->word->text}}</span>
       <span class="cat-domain">作成：</span>
       <span class="cat-domain" itemprop="datePublished">{{$detail->created_at->format("Y-m-d")}}</span> 
       <span class="cat-domain">更新：</span>
@@ -51,6 +50,9 @@
       <p>
         <a href="http://daigakuzyuken-pro.com/" rel="nofollow" target="_blank">[PR]あの「受験の神様」も使っている勉強法を難関大学合格者が毎週更新中</a>
       </p>
+    </div>
+    <div class="block" itemprop="publisher" itemscope itemtype=”https://schema.org/Organization">
+      <img itemprop="logo" src="{{url('/logo24.png')}}" />  <a class="text-muted" itemprop="url" href="{{url('/')}}">{{config('app.name')}}</a>
     </div>
     <div id="tweet-list">
       <ul class="list-group noback">
@@ -171,6 +173,9 @@
         @endphp
       </span>
       <a href="{{$article->path()}}" class="link-btn">サイトへ</a>
+      <div itemprop="publisher" itemscope itemtype=”https://schema.org/Organization">
+      <img itemprop="logo" src="{{url('/logo24.png')}}" />  <a class="cat-domain" itemprop="url" href="{{url('/')}}">{{config('app.name')}}</a>
+    </div>
     </div>
     <span class="view">{{$article->view}} view</span>
   </li>
