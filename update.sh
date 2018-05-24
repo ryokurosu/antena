@@ -26,8 +26,8 @@ cd ..
 /usr/bin/php7.1 artisan view:clear
 filepublic=${filename:7}
 cd -
-/usr/bin/mv $filename/schedule.sh schedule.sh
-/usr/bin/mv $filename/update.sh update.sh
+mv $filename/schedule.sh schedule.sh
+mv $filename/update.sh update.sh
 cd $filepublic
 echo $filepublic
 ~/opt/bin/git init
@@ -35,8 +35,8 @@ echo $filepublic
 ~/opt/bin/git remote add origin git://github.com/ryokurosu/public.git
 ~/opt/bin/git fetch origin
 ~/opt/bin/git reset --hard origin/master
-/usr/bin/mv index.php.template index.php
-/usr/bin/sed -i -e "s/\.\.\/vendor\/autoload.php/\.\.\/antena_$filepublic\/vendor\/autoload.php/g" ./index.php
-/usr/bin/sed -i -e "s/\.\.\/bootstrap\/app.php/\.\.\/antena_$filepublic\/bootstrap\/app.php/g" ./index.php
+mv index.php.template index.php
+sed -i -e "s/\.\.\/vendor\/autoload.php/\.\.\/antena_$filepublic\/vendor\/autoload.php/g" ./index.php
+sed -i -e "s/\.\.\/bootstrap\/app.php/\.\.\/antena_$filepublic\/bootstrap\/app.php/g" ./index.php
 cd -
 done
