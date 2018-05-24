@@ -16,7 +16,13 @@
   <div class="panel-heading"><h1 itemprop="name">{{$detail->title}}</h1></div>
   <div class="panel-body">
     <div class="thumbnail-wrap">
-      <img src="{{$detail->imagePath()}}" alt="{{$detail->title}}">
+      <img src="{{$detail->imagePath()}}" alt="{{$detail->title}}" itemprop="image">
+    </div>
+    <div class="block">
+      <span class="cat-item" item="publisher">{{$detail->word->text}}</span>
+      <span class="cat-domain" item="datePublished">作成：{{$detail->created_at->format("y/m/d")}}</span> 
+      <span class="cat-domain" item="dateModified">更新：{{$detail->updated_at->format("y/m/d")}}</span>
+      <span class="cat-domain" item="author">{{parse_url($detail->url, PHP_URL_HOST)}}</span>
     </div>
     <div class="block">
       <p>
@@ -26,7 +32,7 @@
         <a href="https://uranai-cafe.jp/animal/" rel="nofollow" target="_blank">[PR]動物キャラ占い(無料)で、あなたの性格・恋愛傾向・毎日の運勢・今後の人生の運気がわかります。</a>
       </p>
     </div>
-    <div class="meta-wrap">
+    <div class="meta-wrap" itemname="headline">
       <p>{{$detail->description}}</p>
     </div>
     <div class="link-wrap">
@@ -150,8 +156,8 @@
           </p>
         </div>
         <div class="clear"></div>
-        <div class="col-xs-12 cat" itemname="publisher">
-          <span class="cat-item">
+        <div class="col-xs-12 cat">
+         <span class="cat-item" itemname="publisher">
             {{$article->word->text}}
           </span>
           <span class="cat-domain" itemprop="datePublished">

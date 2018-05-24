@@ -170,8 +170,8 @@
 							</p>
 						</div>
 						<div class="clear"></div>
-						<div class="col-xs-12 cat" itemname="publisher">
-							<span class="cat-item">
+						<div class="col-xs-12 cat">
+							<span class="cat-item" itemname="publisher">
 								{{$article->word->text}}
 							</span>
 							<span class="cat-domain" itemprop="datePublished">
@@ -225,8 +225,8 @@
 							</p>
 						</div>
 						<div class="clear"></div>
-						<div class="col-xs-12 cat" itemname="publisher">
-							<span class="cat-item">
+						<div class="col-xs-12 cat">
+							<span class="cat-item" itemname="publisher">
 								{{$article->word->text}}
 							</span>
 							<span class="cat-domain" itemprop="datePublished">
