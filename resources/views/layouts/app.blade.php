@@ -197,7 +197,7 @@
                       				{{$article->word->text}}
                       			</span>
                       			<span class="cat-domain" itemprop="datePublished">
-                      				{{$article->created_at->format("YYYY-MM-DD")}}
+                      				{{$article->created_at->format("Y-m-d")}}
                       			</span>
                       			<span class="cat-domain" itemprop="author">
                       				@php
@@ -252,7 +252,7 @@
                     			{{$article->word->text}}
                     		</span>
                     		<span class="cat-domain" itemprop="datePublished">
-                    			{{$article->created_at->format("YYYY-MM-DD")}}
+                    			{{$article->created_at->format("Y-m-d")}}
                     		</span>
                     		<span class="cat-domain" itemprop="author">
                     			@php
