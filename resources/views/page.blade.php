@@ -19,7 +19,7 @@
       <img src="{{$detail->imagePath()}}" alt="{{$detail->title}}" itemprop="image">
     </div>
     <div class="block">
-      <span class="cat-item" itemprop="publisher" itemscope itemtype=”https://schema.org/Organization”>{{$detail->word->text}}</span>
+      <span class="cat-item" itemprop="publisher" itemscope itemtype=”https://schema.org/Person>{{$detail->word->text}}</span>
       <span class="cat-domain">作成：</span>
       <span class="cat-domain" itemprop="datePublished">{{$detail->created_at->format("Y-m-d")}}</span> 
       <span class="cat-domain">更新：</span>
@@ -34,7 +34,7 @@
         <a href="https://uranai-cafe.jp/animal/" rel="nofollow" target="_blank">[PR]動物キャラ占い(無料)で、あなたの性格・恋愛傾向・毎日の運勢・今後の人生の運気がわかります。</a>
       </p>
     </div>
-    <div class="meta-wrap" itemname="headline">
+    <div class="meta-wrap" itemprop="headline">
       <p>{{$detail->description}}</p>
     </div>
     <div class="link-wrap">
