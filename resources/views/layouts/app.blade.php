@@ -66,15 +66,14 @@
 	});
 </script>
 <script type="text/javascript">
-    amzn_assoc_ad_type = "link_enhancement_widget";
-    amzn_assoc_tracking_id = "matome07f-22";
-    amzn_assoc_linkid = "9173b81d40a0c623c9ba6743650b8e24";
-    amzn_assoc_placement = "";
-    amzn_assoc_marketplace = "amazon";
-    amzn_assoc_region = "JP";
+	amzn_assoc_ad_type = "link_enhancement_widget";
+	amzn_assoc_tracking_id = "matome07f-22";
+	amzn_assoc_linkid = "9173b81d40a0c623c9ba6743650b8e24";
+	amzn_assoc_placement = "";
+	amzn_assoc_marketplace = "amazon";
+	amzn_assoc_region = "JP";
 </script>
 <script src="//ws-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=JP"></script>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
 	<div id="app">
@@ -221,6 +220,11 @@
                       </ul>
                       <ul class="list-group">
 
+                      	<div class="block text-center">
+                      		<center>
+                      			<script charset="EUC-JP" language="javascript" src="https://api.bookmark.rakuten.co.jp/blogparts/?param1=UEub29A3M74%2Bhd%2Bq0b0ihw%3D%3D&param2=5&param4=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&param6=1&ver=2"></script>
+                      		</center>
+                      	</div>
                       <!-- <div class="block">
                         <center>
                          <a href="https://px.a8.net/svt/ejp?a8mat=2ZGWQL+CCQWR6+50+4T650H" target="_blank" rel="nofollow">

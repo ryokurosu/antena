@@ -66,7 +66,11 @@
               </li>
               <p class="text-center">この記事に対するTwitterでの反応</p>
               @foreach($twitters as $tweet)
-              <blockquote class="twitter-tweet" data-lang="ja"><a href="{{$tweet->tweetLink()}}"></a></blockquote>
+              <li class="list-group-item">
+                <p>{{'@'}}{{$tweet->user_id}}</p>
+                <p>{{$tweet->text}}</p>
+                <span class="time">{{$tweet->updated_at->format('Y/n/j H:i:s')}}</span>
+              </li>
               @endforeach
             </ul>
           </div>

@@ -61,9 +61,9 @@
               </li>
               @foreach($twitters as $tweet)
               <li class="list-group-item">
-                <p><a href="{{$tweet->userLink()}}" rel="nofollow" target="_blank">{{'@'}}{{$tweet->user_id}}</a></p>
+                <p>{{'@'}}{{$tweet->user_id}}</p>
                 <p>{{$tweet->text}}</p>
-                <span class="time"><a href="{{$tweet->tweetLink()}}" rel="nofollow" target="_blank">{{$tweet->updated_at->format('Y/n/j H:i:s')}}</a></span>
+                <span class="time">{{$tweet->updated_at->format('Y/n/j H:i:s')}}</span>
               </li>
               @endforeach
             </ul>
