@@ -125,7 +125,7 @@
 					<li class="list-group-item">
 						<div class="col-xs-3 thumbnail">
 							<a href="https://masakuraudo2.com/archives/2051">
-								<amp-img src="{{url('/ufahefiah.jpg')}}"  width="108" height="72" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も..."></amp-img>
+								<amp-img src="{{url('/ufahefiah.jpg')}}"  width="80" height="53" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も..."></amp-img>
 							</a>
 						</div>
 						<div class="col-xs-9 title">
