@@ -1,4 +1,4 @@
-@if(url()->full() == url('/'))
+@if(url()->current() == url('/index.amp'))
 @section('title',config('app.name'))
 @section('description'){{config('app.name')}}では @php echo \App\Word::where('id','>',0)->take(20)->get()->implode('text',','); @endphp についての情報がまとめられてます。@stop
 @else
