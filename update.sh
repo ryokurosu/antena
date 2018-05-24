@@ -25,8 +25,7 @@ cd ..
 /usr/bin/php7.1 artisan route:clear
 /usr/bin/php7.1 artisan view:clear
 filepublic=${filename:7}
-cd -
-mv $filename/schedule.sh schedule.sh
+cd ..
 cd $filepublic
 echo $filepublic
 ~/opt/bin/git init
@@ -38,4 +37,5 @@ mv index.php.template index.php
 sed -i -e "s/\.\.\/vendor\/autoload.php/\.\.\/antena_$filepublic\/vendor\/autoload.php/g" ./index.php
 sed -i -e "s/\.\.\/bootstrap\/app.php/\.\.\/antena_$filepublic\/bootstrap\/app.php/g" ./index.php
 cd -
+mv $filename/schedule.sh schedule.sh
 done
