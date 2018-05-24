@@ -36,6 +36,6 @@ echo $filepublic
 mv index.php.template index.php
 sed -i -e "s/\.\.\/vendor\/autoload.php/\.\.\/antena_$filepublic\/vendor\/autoload.php/g" ./index.php
 sed -i -e "s/\.\.\/bootstrap\/app.php/\.\.\/antena_$filepublic\/bootstrap\/app.php/g" ./index.php
-cd -
+cd ..
 mv $filename/schedule.sh schedule.sh
 done
