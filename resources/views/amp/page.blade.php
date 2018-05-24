@@ -20,10 +20,10 @@
       <amp-img src="{{$detail->imagePath()}}"  width="520" height="350" layout="responsive" alt="{{$detail->title}}" itemprop="image"></amp-img>
     </div>
     <div class="block">
-      <span class="cat-item" item="publisher">{{$detail->word->text}}</span>
-      <span class="cat-domain" item="datePublished">作成：{{$detail->created_at->format("y/m/d")}}</span> 
-      <span class="cat-domain" item="dateModified">更新：{{$detail->updated_at->format("y/m/d")}}</span>
-      <span class="cat-domain" item="author">{{parse_url($detail->url, PHP_URL_HOST)}}</span>
+      <span class="cat-item" itemprop="publisher">{{$detail->word->text}}</span>
+      <span class="cat-domain" itemprop="datePublished">作成：{{$detail->created_at->format("y/m/d")}}</span> 
+      <span class="cat-domain" itemprop="dateModified">更新：{{$detail->updated_at->format("y/m/d")}}</span>
+      <span class="cat-domain" itemprop="author">{{parse_url($detail->url, PHP_URL_HOST)}}</span>
     </div>
     <div class="block">
       <p>
@@ -158,7 +158,7 @@
           </div>
           <div class="clear"></div>
           <div class="col-xs-12 cat">
-            <span class="cat-item" itemname="publisher">
+            <span class="cat-item" itemprop="publisher">
               {{$article->word->text}}
             </span>
             <span class="cat-domain" itemprop="datePublished">
