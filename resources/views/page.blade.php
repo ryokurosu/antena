@@ -20,8 +20,8 @@
     </div>
     <div class="block">
       <span class="cat-item" itemprop="publisher">{{$detail->word->text}}</span>
-      <span class="cat-domain" itemprop="datePublished">作成：{{$detail->created_at->format("y/m/d")}}</span> 
-      <span class="cat-domain" itemprop="dateModified">更新：{{$detail->updated_at->format("y/m/d")}}</span>
+      <span class="cat-domain" itemprop="datePublished">作成：{{$detail->created_at->format("YYYY-MM-DD")}}</span> 
+      <span class="cat-domain" itemprop="dateModified">更新：{{$detail->updated_at->format("YYYY-MM-DD")}}</span>
       <span class="cat-domain" itemprop="author">{{parse_url($detail->url, PHP_URL_HOST)}}</span>
     </div>
     <div class="block">
@@ -157,11 +157,11 @@
         </div>
         <div class="clear"></div>
         <div class="col-xs-12 cat">
-         <span class="cat-item" itemname="publisher">
+         <span class="cat-item" itemprop="publisher">
             {{$article->word->text}}
           </span>
           <span class="cat-domain" itemprop="datePublished">
-           {{$article->created_at->format("Y/m/d")}}
+           {{$article->created_at->format("YYYY-MM-DD")}}
          </span>
          <span class="cat-domain" itemprop="author">
           @php
