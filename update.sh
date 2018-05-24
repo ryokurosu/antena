@@ -27,7 +27,6 @@ cd ..
 filepublic=${filename:7}
 cd -
 mv $filename/schedule.sh schedule.sh
-mv $filename/update.sh update.sh
 cd $filepublic
 echo $filepublic
 ~/opt/bin/git init
