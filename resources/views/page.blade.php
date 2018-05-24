@@ -44,6 +44,9 @@
         <a href="http://daigakuzyuken-pro.com/" rel="nofollow" target="_blank">[PR]あの「受験の神様」も使っている勉強法を難関大学合格者が毎週更新中</a>
       </p>
     </div>
+    <div class="block text-center">
+      <SCRIPT charset="utf-8" type="text/javascript" src="//ws-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fryoprog-22%2F8009%2F86187d26-048e-472e-aa01-0f65bdfdf06c&Operation=GetScriptTemplate"> </SCRIPT> <NOSCRIPT><A rel="nofollow" HREF="//ws-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fryoprog-22%2F8009%2F86187d26-048e-472e-aa01-0f65bdfdf06c&Operation=NoScript">Amazon.co.jp ウィジェット</A></NOSCRIPT>
+    </div>
     <div id="tweet-list">
       <ul class="list-group noback">
         <li class="list-group-item">
@@ -74,7 +77,7 @@
             <li class="list-group-item">
               <div class="col-xs-3 thumbnail">
                 <a href="https://lim-jp.com/archives/449">
-                  <img src="{{url('/uydagfea.jpg')}}" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...">
+                  <img src="{{url('/uydagfea.jpg')}}" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう..." rel="nofollow">
                 </a>
               </div>
               <div class="col-xs-9 title">
@@ -105,7 +108,7 @@
           <li class="list-group-item">
             <div class="col-xs-3 thumbnail">
               <a href="https://masakuraudo2.com/archives/2051">
-                <img src="{{url('/ufahefiah.jpg')}}" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...">
+                <img src="{{url('/ufahefiah.jpg')}}" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も..." rel="nofollow">
               </a>
             </div>
             <div class="col-xs-9 title">
