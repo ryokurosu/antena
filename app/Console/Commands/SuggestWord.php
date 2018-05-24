@@ -51,6 +51,10 @@ class SuggestWord extends Command
         return false;
       }
       foreach ($words as $word) {
+        if(!$this->argument('word') && Word::count() > 500){
+          break;
+        }
+
         try {
           $client = new Client();
           $sitemap = $client->request('GET',"https://www.google.com/complete/search?hl=en&q=hello&output=toolbar&q=" . urlencode($word->text));
