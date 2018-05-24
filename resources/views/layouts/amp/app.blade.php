@@ -68,125 +68,128 @@
 			}
 		}
 	</script>
-	</amp-analytics>
-	<div id="app">
-		<nav class="navbar navbar-default navbar-static-top">
-			<div class="container">
-				<div class="navbar-header">
-
-					<a class="navbar-brand" href="{{ url('/') }}">
-						{{ config('app.name', 'Laravel') }}
-					</a>
-				</div>
-			</div>
-		</nav>
+</amp-analytics>
+<div id="app">
+	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
-			@yield('breadcrumbs')
-			<div class="row">
-				<div class="col-xs-12 col-md-6">
-					@yield('content')
-				</div>
-				<div class="col-xs-12 col-md-6" id="sidebar">
-					<ul class="list-group">
-						<li class="list-group-item active">人気記事</li>
-						@foreach(\App\Article::popular()->take(5)->cursor() as $article)
-						@if($loop->iteration == 1)
-						<li class="list-group-item">
-							<div class="col-xs-3 thumbnail">
-								<a href="https://lim-jp.com/archives/449">
-									<amp-img src="{{url('/uydagfea.jpg')}}" width="60" height="80" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう..."></amp-img>
-								</a>
-							</div>
-							<div class="col-xs-9 title">
-								<a href="https://lim-jp.com/archives/449">
-									【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...
-								</a>
-								<p class="text-muted description">
-									@php
-									echo mb_strimwidth("ローラのインスタグラムは「写真が素敵」「服が可愛い」と何かと話題です。最近でもニュースになった「バギー」や「ジム」の画像から、ローラの写真加工に関する情報もまとめてみました。", 0, 120, '', 'utf8');
-									@endphp
-								</p>
-							</div>
-							<div class="clear"></div>
-							<div class="col-xs-12 cat">
-								<span class="cat-item">
-									芸能
-								</span>
-								<span class="cat-domain">
-									@php
-									echo parse_url("https://lim-jp.com/archives/449", PHP_URL_HOST);
-									@endphp
-								</span>
-								<a href="https://lim-jp.com/archives/449" class="link-btn">サイトへ</a>
-							</div>
-							<span class="view">{{$article->view * 2 + 32}} view</span>
-						</li>
-						@elseif($loop->iteration == 4)
-						<li class="list-group-item">
-							<div class="col-xs-3 thumbnail">
-								<a href="https://masakuraudo2.com/archives/2051">
-									<amp-img src="{{url('/ufahefiah.jpg')}}"  width="108" height="72" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も..."></amp-img>
-								</a>
-							</div>
-							<div class="col-xs-9 title">
-								<a href="https://masakuraudo2.com/archives/2051">
-									看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...
-								</a>
-								<p class="text-muted description">
-									@php
-									echo mb_strimwidth("私も急に抱きつかれたことがあって。しかも夜中だったからめっちゃ怖かったです。。手のひらにキスされたのはほんと嫌でした。速攻手指消毒しました", 0, 120, '', 'utf8');
-									@endphp
-								</a>
-							</div>
-							<div class="clear"></div>
-							<div class="col-xs-12 cat">
-								<span class="cat-item">
-									医療
-								</span>
-								<span class="cat-domain">
-									@php
-									echo parse_url("https://masakuraudo2.com/archives/2051", PHP_URL_HOST);
-									@endphp
-								</span>
-								<a href="https://masakuraudo2.com/archives/2051" class="link-btn">サイトへ</a>
-							</div>
-							<span class="view">{{$article->view}} view</span>
-						</li>
-						@endif
-						<li class="list-group-item"  itemscope itemtype="http://schema.org/Article">
-							<div class="col-xs-3 thumbnail">
-								<a href="{{$article->ampPath()}}">
-									<amp-img src="{{$article->thumbnailPath()}}"  width="80" height="80" layout="responsive" alt="{{$article->title}}"></amp-img>
-								</a>
-							</div>
-							<div class="col-xs-9 title">
-								<a href="{{$article->ampPath()}}" itemprop="name">
-									{{$article->title}}
-								</a>
-								<p class="text-muted description">
-									@php
-									echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
-									@endphp
-								</p>
-							</div>
-							<div class="clear"></div>
-							<div class="col-xs-12 cat">
-								<span class="cat-item">
-									{{$article->word->text}}
-								</span>
-								<span class="cat-domain" itemprop="author">
-									@php
-									echo parse_url($article->url, PHP_URL_HOST);
-									@endphp
-								</span>
-								<a href="{{$article->ampPath()}}" class="link-btn">サイトへ</a>
-							</div>
-							<span class="view">{{$article->view}} view</span>
-						</li>
-						@endforeach
+			<div class="navbar-header">
 
-					</ul>
-					<ul class="list-group">
+				<a class="navbar-brand" href="{{ url('/') }}">
+					{{ config('app.name', 'Laravel') }}
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		@yield('breadcrumbs')
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				@yield('content')
+			</div>
+			<div class="col-xs-12 col-md-6" id="sidebar">
+				<ul class="list-group">
+					<li class="list-group-item active">人気記事</li>
+					@foreach(\App\Article::popular()->take(5)->cursor() as $article)
+					@if($loop->iteration == 1)
+					<li class="list-group-item">
+						<div class="col-xs-3 thumbnail">
+							<a href="https://lim-jp.com/archives/449">
+								<amp-img src="{{url('/uydagfea.jpg')}}" width="60" height="80" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう..."></amp-img>
+							</a>
+						</div>
+						<div class="col-xs-9 title">
+							<a href="https://lim-jp.com/archives/449">
+								【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...
+							</a>
+							<p class="text-muted description">
+								@php
+								echo mb_strimwidth("ローラのインスタグラムは「写真が素敵」「服が可愛い」と何かと話題です。最近でもニュースになった「バギー」や「ジム」の画像から、ローラの写真加工に関する情報もまとめてみました。", 0, 120, '', 'utf8');
+								@endphp
+							</p>
+						</div>
+						<div class="clear"></div>
+						<div class="col-xs-12 cat">
+							<span class="cat-item">
+								芸能
+							</span>
+							<span class="cat-domain">
+								@php
+								echo parse_url("https://lim-jp.com/archives/449", PHP_URL_HOST);
+								@endphp
+							</span>
+							<a href="https://lim-jp.com/archives/449" class="link-btn">サイトへ</a>
+						</div>
+						<span class="view">{{$article->view * 2 + 32}} view</span>
+					</li>
+					@elseif($loop->iteration == 4)
+					<li class="list-group-item">
+						<div class="col-xs-3 thumbnail">
+							<a href="https://masakuraudo2.com/archives/2051">
+								<amp-img src="{{url('/ufahefiah.jpg')}}"  width="108" height="72" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も..."></amp-img>
+							</a>
+						</div>
+						<div class="col-xs-9 title">
+							<a href="https://masakuraudo2.com/archives/2051">
+								看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...
+							</a>
+							<p class="text-muted description">
+								@php
+								echo mb_strimwidth("私も急に抱きつかれたことがあって。しかも夜中だったからめっちゃ怖かったです。。手のひらにキスされたのはほんと嫌でした。速攻手指消毒しました", 0, 120, '', 'utf8');
+								@endphp
+							</a>
+						</div>
+						<div class="clear"></div>
+						<div class="col-xs-12 cat">
+							<span class="cat-item">
+								医療
+							</span>
+							<span class="cat-domain">
+								@php
+								echo parse_url("https://masakuraudo2.com/archives/2051", PHP_URL_HOST);
+								@endphp
+							</span>
+							<a href="https://masakuraudo2.com/archives/2051" class="link-btn">サイトへ</a>
+						</div>
+						<span class="view">{{$article->view}} view</span>
+					</li>
+					@endif
+					<li class="list-group-item"  itemscope itemtype="http://schema.org/Article">
+						<div class="col-xs-3 thumbnail">
+							<a href="{{$article->ampPath()}}">
+								<amp-img src="{{$article->thumbnailPath()}}"  width="80" height="80" layout="responsive" alt="{{$article->title}}" itemprop="image"></amp-img>
+							</a>
+						</div>
+						<div class="col-xs-9 title">
+							<a href="{{$article->ampPath()}}" itemprop="name">
+								{{$article->title}}
+							</a>
+							<p class="text-muted description" itemprop="headline">
+								@php
+								echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
+								@endphp
+							</p>
+						</div>
+						<div class="clear"></div>
+						<div class="col-xs-12 cat" itemname="publisher">
+							<span class="cat-item">
+								{{$article->word->text}}
+							</span>
+							<span class="cat-domain" itemprop="datePublished">
+								{{$article->created_at->format("Y/m/d")}}
+							</span>
+							<span class="cat-domain" itemprop="author">
+								@php
+								echo parse_url($article->url, PHP_URL_HOST);
+								@endphp
+							</span>
+							<a href="{{$article->ampPath()}}" class="link-btn">サイトへ</a>
+						</div>
+						<span class="view">{{$article->view}} view</span>
+					</li>
+					@endforeach
+
+				</ul>
+				<ul class="list-group">
 
                       <!-- <div class="block">
                         <center>
@@ -205,38 +208,39 @@
                     -->
                     <li class="list-group-item active">新着記事</li>
                     @foreach(\App\Article::latest()->take(5)->cursor() as $article)
-                    <li class="list-group-item" itemscope itemtype="http://schema.org/Article">
-                    	<div class="padding-wrap">
-                    		<div class="col-xs-3 thumbnail">
-                    			<a href="{{$article->ampPath()}}">
-                    				<amp-img src="{{$article->thumbnailPath()}}"  width="80" height="80" layout="responsive" alt="{{$article->title}}"></amp-img>
-                    			</a>
-                    		</div>
-                    		<div class="col-xs-9 title">
-                    			<a href="{{$article->ampPath()}}" itemprop="name">
-                    				{{$article->title}}
-                    			</a>
-                    			<p class="text-muted description">
-                    				@php
-                    				echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
-                    				@endphp
-                    			</p>
-                    		</div>
-                    		<div class="clear"></div>
-                    		<div class="col-xs-12 cat">
-                    			<span class="cat-item">
-                    				{{$article->word->text}}
-                    			</span>
-                    			<span class="cat-domain" itemprop="author">
-                    				@php
-                    				echo parse_url($article->url, PHP_URL_HOST);
-                    				@endphp
-                    			</span>
-                    			<a href="{{$article->ampPath()}}" class="link-btn">サイトへ</a>
-                    		</div>
-                    		<span class="view">{{$article->view}} view</span>
-                    	</div>
-                    </li>
+                    <li class="list-group-item"  itemscope itemtype="http://schema.org/Article">
+						<div class="col-xs-3 thumbnail">
+							<a href="{{$article->ampPath()}}">
+								<amp-img src="{{$article->thumbnailPath()}}"  width="80" height="80" layout="responsive" alt="{{$article->title}}" itemprop="image"></amp-img>
+							</a>
+						</div>
+						<div class="col-xs-9 title">
+							<a href="{{$article->ampPath()}}" itemprop="name">
+								{{$article->title}}
+							</a>
+							<p class="text-muted description" itemprop="headline">
+								@php
+								echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
+								@endphp
+							</p>
+						</div>
+						<div class="clear"></div>
+						<div class="col-xs-12 cat" itemname="publisher">
+							<span class="cat-item">
+								{{$article->word->text}}
+							</span>
+							<span class="cat-domain" itemprop="datePublished">
+								{{$article->created_at->format("Y/m/d")}}
+							</span>
+							<span class="cat-domain" itemprop="author">
+								@php
+								echo parse_url($article->url, PHP_URL_HOST);
+								@endphp
+							</span>
+							<a href="{{$article->ampPath()}}" class="link-btn">サイトへ</a>
+						</div>
+						<span class="view">{{$article->view}} view</span>
+					</li>
                     @endforeach
                 </ul>
 

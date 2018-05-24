@@ -35,23 +35,26 @@
     <li class="list-group-item" itemscope itemtype="http://schema.org/Article">
         <div class="col-xs-3 thumbnail">
           <a href="{{$article->path()}}">
-            <img src="{{$article->thumbnailPath()}}" alt="{{$article->title}}">
+            <img src="{{$article->thumbnailPath()}}" alt="{{$article->title}}" itemprop="image">
           </a>
         </div>
         <div class="col-xs-9 title">
           <a href="{{$article->path()}}" itemprop="name">
            {{$article->title}}
          </a>
-         <p class="text-muted description">
+         <p class="text-muted description" itemprop="headline">
           @php
           echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
           @endphp
         </p>
       </div>
       <div class="clear"></div>
-      <div class="col-xs-12 cat">
+      <div class="col-xs-12 cat" itemname="publisher">
         <span class="cat-item">
           {{$article->word->text}}
+        </span>
+        <span class="cat-domain" itemprop="datePublished">
+         {{$article->created_at->format("Y/m/d")}}
         </span>
         <span class="cat-domain" itemprop="author">
           @php
