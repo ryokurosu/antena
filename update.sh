@@ -13,24 +13,15 @@ cd public
 ~/opt/bin/git fetch origin
 ~/opt/bin/git reset --hard origin/master
 cd ..
-~/opt/bin/git init
-~/opt/bin/git remote rm origin
-~/opt/bin/git remote add origin git://github.com/ryokurosu/antena.git
 ~/opt/bin/git fetch origin
 ~/opt/bin/git reset --hard origin/master
 ~/opt/bin/git submodule foreach git pull origin master
 ~/opt/bin/git submodule update
-/usr/bin/php7.1 artisan cache:clear
 /usr/bin/php7.1 artisan config:clear
-/usr/bin/php7.1 artisan route:clear
-/usr/bin/php7.1 artisan view:clear
 filepublic=${filename:7}
 cd ..
 cd $filepublic
 echo $filepublic
-~/opt/bin/git init
-~/opt/bin/git remote rm origin
-~/opt/bin/git remote add origin git://github.com/ryokurosu/public.git
 ~/opt/bin/git fetch origin
 ~/opt/bin/git reset --hard origin/master
 mv index.php.template index.php
