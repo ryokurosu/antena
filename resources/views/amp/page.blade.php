@@ -16,8 +16,17 @@
 <div class="panel panel-default" itemscope itemtype="http://schema.org/Article">
   <div class="panel-heading"><h1 itemprop="name">{{$detail->title}}</h1></div>
   <div class="panel-body">
+    <span itemprop="publisher" itemscope="itemscope" itemtype='https://schema.org/Organization'>
+      <meta itemprop="url" content="{{config('app.url')}}">
+      <meta itemprop="name" content="{{config('app.name')}}">
+      <span itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+        <meta itemprop='url' content="{{url('/logo24.png')}}">
+      </span>
+    </span>
+    <meta itemprop="datePublished" content="{{$detail->created_at->format('Y/m/d')}}">
+    <meta itemprop="dateModified" content="{{$detail->updated_at->format('Y-m-d')}}">
     <div class="thumbnail-wrap">
-      <amp-img src="{{$detail->imagePath()}}"  width="520" height="350" layout="responsive" alt="{{$detail->title}}"></amp-img>
+      <amp-img src="{{$detail->imagePath()}}"  width="520" height="350" layout="responsive" alt="{{$detail->title}}" itemprop="image"></amp-img>
     </div>
     <div class="block">
       <p>
@@ -27,7 +36,7 @@
         <a href="https://uranai-cafe.jp/animal/result/1990/1/1" rel="nofollow" target="_blank">[PR]無料でできる動物キャラ占い。あなたの性格・恋愛傾向・運勢・他の人との相性をすべて無料で診断できます。</a>
       </p>
     </div>
-    <div class="meta-wrap">
+    <div class="meta-wrap" itemprop="headline">
       <p>{{$detail->description}}</p>
     </div>
     <div class="link-wrap">
@@ -58,119 +67,21 @@
             <li class="list-group-item">
               <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">{{'@mama_nerse'}}</a></p>
               <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</a></p>
-              </li>
-              @foreach($twitters as $tweet)
-              <li class="list-group-item">
-                <p>{{'@'}}{{$tweet->user_id}}</p>
-                <p>{{$tweet->text}}</p>
-                <span class="time">{{$tweet->updated_at->format('Y/n/j H:i:s')}}</span>
-              </li>
-              @endforeach
-            </ul>
-          </div>
-
-          <ul class="list-group noback">
-            @foreach($articles as $article)
-            @if($loop->iteration == 1)
+            </li>
+            @foreach($twitters as $tweet)
             <li class="list-group-item">
-              <div class="col-xs-3 thumbnail">
-                <a href="https://lim-jp.com/archives/449">
-                  <amp-img src="{{url('/uydagfea.jpg')}}" width="60" height="80"  alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう..."></amp-img>
-                </a>
-              </div>
-              <div class="col-xs-9 title">
-                <a href="https://lim-jp.com/archives/449">
-                 【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...
-               </a>
-               <p class="text-muted description">
-                @php
-                echo mb_strimwidth("ローラのインスタグラムは「写真が素敵」「服が可愛い」と何かと話題です。最近でもニュースになった「バギー」や「ジム」の画像から、ローラの写真加工に関する情報もまとめてみました。", 0, 120, '', 'utf8');
-                @endphp
-              </p>
-            </div>
-            <div class="clear"></div>
-            <div class="col-xs-12 cat">
-              <span class="cat-item">
-                芸能
-              </span>
-              <span class="cat-domain">
-                @php
-                echo parse_url("https://lim-jp.com/archives/449", PHP_URL_HOST);
-                @endphp
-              </span>
-              <a href="https://lim-jp.com/archives/449" class="link-btn">サイトへ</a>
-            </div>
-            <span class="view">{{$article->view * 2 + 32}} view</span>
-          </li>
-          @elseif($loop->iteration == 4)
-          <li class="list-group-item">
-            <div class="col-xs-3 thumbnail">
-              <a href="https://masakuraudo2.com/archives/2051">
-                <amp-img src="{{url('/ufahefiah.jpg')}}"  width="80" height="53" alt="看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も..."></amp-img>
-              </a>
-            </div>
-            <div class="col-xs-9 title">
-              <a href="https://masakuraudo2.com/archives/2051">
-               看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...
-             </a>
-             <p class="text-muted description">
-              @php
-              echo mb_strimwidth("私も急に抱きつかれたことがあって。しかも夜中だったからめっちゃ怖かったです。。手のひらにキスされたのはほんと嫌でした。速攻手指消毒しました", 0, 120, '', 'utf8');
-              @endphp
-            </a>
-          </div>
-          <div class="clear"></div>
-          <div class="col-xs-12 cat">
-            <span class="cat-item">
-              医療
-            </span>
-            <span class="cat-domain">
-              @php
-              echo parse_url("https://masakuraudo2.com/archives/2051", PHP_URL_HOST);
-              @endphp
-            </span>
-            <a href="https://masakuraudo2.com/archives/2051" class="link-btn">サイトへ</a>
-          </div>
-          <span class="view">{{$article->view}} view</span>
-        </li>
-        @endif
-        <li class="list-group-item"  itemscope itemtype="http://schema.org/Article">
-          <div class="col-xs-3 thumbnail">
-            <a href="{{$article->ampPath()}}">
-              <amp-img src="{{$article->thumbnailPath()}}"  width="120" height="90" layout="responsive" alt="{{$article->title}}"></amp-img>
-            </a>
-          </div>
-          <div class="col-xs-9 title">
-            <a href="{{$article->ampPath()}}" itemprop="name">
-             {{$article->title}}
-           </a>
-           <p class="text-muted description">
-            @php
-            echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
-            @endphp
-          </p>
+              <p>{{'@'}}{{$tweet->user_id}}</p>
+              <p>{{$tweet->text}}</p>
+              <span class="time">{{$tweet->updated_at->format('Y/n/j H:i:s')}}</span>
+            </li>
+            @endforeach
+          </ul>
         </div>
-        <div class="clear"></div>
-        <div class="col-xs-12 cat">
-          <span class="cat-item">
-            {{$article->word->text}}
-          </span>
-          <span class="cat-domain" itemprop="author">
-            @php
-            echo parse_url($article->url, PHP_URL_HOST);
-            @endphp
-          </span>
-          <a href="{{$article->ampPath()}}" class="link-btn">サイトへ</a>
-        </div>
-        <span class="view">{{$article->view}} view</span>
-      </li>
-      @endforeach
-    </ul>
 
-    <div class="meta-wrap block">
-      <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
+        <div class="meta-wrap block">
+          <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
+        </div>
+
+      </div>
     </div>
-
-  </div>
-</div>
-@endsection
+    @endsection
