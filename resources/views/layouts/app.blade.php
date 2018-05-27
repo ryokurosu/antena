@@ -213,6 +213,7 @@
                       			<span class="cat-domain" itemprop="datePublished">
                       				{{$article->created_at->format("Y-m-d")}}
                       			</span>
+                      			<meta itemprop="dateModified" content="{{$article->updated_at->format('Y-m-d')}}">
                       			<span class="cat-domain" itemprop="author">
                       				@php
                       				echo parse_url($article->url, PHP_URL_HOST);
@@ -280,6 +281,7 @@
                     		<span class="cat-domain" itemprop="datePublished">
                     			{{$article->created_at->format("Y-m-d")}}
                     		</span>
+                    		<meta itemprop="dateModified" content="{{$article->updated_at->format('Y-m-d')}}">
                     		<span class="cat-domain" itemprop="author">
                     			@php
                     			echo parse_url($article->url, PHP_URL_HOST);

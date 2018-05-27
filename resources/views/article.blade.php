@@ -33,42 +33,43 @@
   <ul class="list-group">
     @foreach($articles as $article)
     <li class="list-group-item" itemscope itemtype="http://schema.org/Article">
-        <div class="col-xs-3 thumbnail">
-          <a href="{{$article->path()}}">
-            <img src="{{$article->thumbnailPath()}}" alt="{{$article->title}}" itemprop="image">
-          </a>
-        </div>
-        <div class="col-xs-9 title">
-          <a href="{{$article->path()}}" itemprop="name">
-           {{$article->title}}
-         </a>
-         <p class="text-muted description" itemprop="headline">
-          @php
-          echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
-          @endphp
-        </p>
+      <div class="col-xs-3 thumbnail">
+        <a href="{{$article->path()}}">
+          <img src="{{$article->thumbnailPath()}}" alt="{{$article->title}}" itemprop="image">
+        </a>
       </div>
-      <div class="clear"></div>
-      <div class="col-xs-12 cat">
-        <span itemprop="publisher" itemscope="itemscope" itemtype='https://schema.org/Organization'>
-          <meta itemprop="url" content="{{config('app.url')}}">
-          <meta itemprop="name" content="{{config('app.name')}}">
-          <span itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
-            <meta itemprop='url' content="{{url('/logo24.png')}}">
-          </span>
+      <div class="col-xs-9 title">
+        <a href="{{$article->path()}}" itemprop="name">
+         {{$article->title}}
+       </a>
+       <p class="text-muted description" itemprop="headline">
+        @php
+        echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
+        @endphp
+      </p>
+    </div>
+    <div class="clear"></div>
+    <div class="col-xs-12 cat">
+      <span itemprop="publisher" itemscope="itemscope" itemtype='https://schema.org/Organization'>
+        <meta itemprop="url" content="{{config('app.url')}}">
+        <meta itemprop="name" content="{{config('app.name')}}">
+        <span itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+          <meta itemprop='url' content="{{url('/logo24.png')}}">
         </span>
-        <span class="cat-item">
-          {{$article->word->text}}
-        </span>
-        <meta itemprop="datePublished" content="{{$article->updated_at->format('Y/m/d')}}">
-        <span class="cat-domain" itemprop="author">
-          @php
-          echo parse_url($article->url, PHP_URL_HOST);
-          @endphp
-        </span>
-        <a href="{{$article->path()}}" class="link-btn">サイトへ</a>
-      </div>
-      <span class="view">{{$article->view}} view</span>
+      </span>
+      <span class="cat-item">
+        {{$article->word->text}}
+      </span>
+      <meta itemprop="datePublished" content="{{$article->created_at->format('Y/m/d')}}">
+      <meta itemprop="dateModified" content="{{$article->updated_at->format('Y-m-d')}}">
+      <span class="cat-domain" itemprop="author">
+        @php
+        echo parse_url($article->url, PHP_URL_HOST);
+        @endphp
+      </span>
+      <a href="{{$article->path()}}" class="link-btn">サイトへ</a>
+    </div>
+    <span class="view">{{$article->view}} view</span>
   </li>
   @endforeach
 </ul>
