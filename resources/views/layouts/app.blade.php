@@ -222,7 +222,7 @@
 
                       	<div class="block text-center">
                       		<center>
-                      			<script charset="EUC-JP" language="javascript" src="https://api.bookmark.rakuten.co.jp/blogparts/?param1=UEub29A3M74%2Bhd%2Bq0b0ihw%3D%3D&param2=5&param4=%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E5%95%86%E5%93%81&param6=1&ver=2"></script>
+                      			<script type="text/javascript">var a8='a17022183659_2TCFED_6W9V4I_2HOM_BUB81';var rankParam='SdU06YhIRmkt9nB6RNkCQGksqmksiwiD6eaRpwhIiN_RzJSxx';var bannerType='0';var bannerKind='item.fix.kind7';var frame='1';var ranking='1';var category='性別年代';</script><script type="text/javascript" src="//rws.a8.net/rakuten/ranking.js"></script>
                       		</center>
                       	</div>
                       <!-- <div class="block">
