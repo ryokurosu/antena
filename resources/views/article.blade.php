@@ -50,6 +50,13 @@
       </div>
       <div class="clear"></div>
       <div class="col-xs-12 cat">
+        <span itemprop="publisher" itemscope="itemscope" itemtype='https://schema.org/Organization'>
+          <meta itemprop="url" content="{{config('app.url')}}">
+          <meta itemprop="name" content="{{config('app.name')}}">
+          <span itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+            <meta itemprop='url' content="{{url('/logo24.png')}}">
+          </span>
+        </span>
         <span class="cat-item">
           {{$article->word->text}}
         </span>
