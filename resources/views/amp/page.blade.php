@@ -26,8 +26,13 @@
     <meta itemprop="datePublished" content="{{$detail->created_at->format('Y/m/d')}}">
     <meta itemprop="dateModified" content="{{$detail->updated_at->format('Y-m-d')}}">
     <div class="thumbnail-wrap">
-      <amp-img src="{{$detail->imagePath()}}"  width="520" height="350" layout="responsive" alt="{{$detail->title}}" itemprop="image"></amp-img>
+      <amp-img src="{{$detail->imagePath()}}" itemprop="image" width="520" height="350" layout="responsive" alt="{{$detail->title}}"></amp-img>
     </div>
+    <span class="cat-domain" itemprop="author">
+        @php
+        echo parse_url($detail->url, PHP_URL_HOST);
+        @endphp
+      </span>
     <div class="block">
       <p>
         <a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">[PR]【最新版】病院にいる9割の医者が知らないアトピー完治のコツを公開！？</a>
