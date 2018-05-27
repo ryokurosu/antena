@@ -14,8 +14,8 @@
 
 <div class="panel panel-default" itemscope itemtype="http://schema.org/Article">
   <div class="panel-heading"><h1 itemprop="name">{{$detail->title}}</h1></div>
-  <meta itemprop="datePublished" content="{{$article->created_at->format('Y/m/d')}}">
-  <meta itemprop="dateModified" content="{{$article->updated_at->format('Y-m-d')}}">
+  <meta itemprop="datePublished" content="{{$detail->created_at->format('Y/m/d')}}">
+  <meta itemprop="dateModified" content="{{$detail->updated_at->format('Y-m-d')}}">
   <div class="panel-body">
     <div class="thumbnail-wrap">
       <img src="{{$detail->imagePath()}}" alt="{{$detail->title}}" itemprop="image">
