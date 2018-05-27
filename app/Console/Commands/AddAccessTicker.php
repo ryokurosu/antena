@@ -42,13 +42,14 @@ class AddAccessTicker extends Command
         foreach(\App\Article::where('description',"")->cursor() as $article){
             $article->description = "この記事には説明文はありません。";
             $article->save();
+            echo "|";
         }
-        \App\Article::orderBy('created_at','desc')->take(10000)->chunk(1000,function($articles) use (&$count){
-            foreach($articles as $v){
-                $v->increment('view');
-                $count++;
-            }
-        });
+        // \App\Article::orderBy('created_at','desc')->take(10000)->chunk(1000,function($articles) use (&$count){
+        //     foreach($articles as $v){
+        //         $v->increment('view');
+        //         $count++;
+        //     }
+        // });
         $time = microtime(true) - $time_start;
         $time = number_format($time,2);
         noticeDiscord("Ticker {$count} articles. {$time} s");
