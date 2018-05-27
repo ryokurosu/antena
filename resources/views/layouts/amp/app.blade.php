@@ -155,8 +155,11 @@
 					@endif
 					<li class="list-group-item"  itemscope itemtype="http://schema.org/Article">
 						<div class="col-xs-3 thumbnail">
-							<a href="{{$article->ampPath()}}">
-								<amp-img src="{{$article->thumbnailPath()}}"  width="80" height="80" layout="responsive" alt="{{$article->title}}" itemprop="image"></amp-img>
+							<a href="{{$article->ampPath()}}"  itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+								<amp-img src="{{$article->thumbnailPath()}}"  width="80" height="80" layout="responsive" alt="{{$article->title}}"></amp-img>
+								<meta itemprop="url" content="{{$article->thumbnailPath()}}">
+								<meta itemprop="width" content="80">
+								<meta itemprop="height" content="80">
 							</a>
 						</div>
 						<div class="col-xs-9 title">
@@ -181,9 +184,8 @@
 							<span class="cat-item">
 								{{$article->word->text}}
 							</span>
-							<span class="cat-domain" itemprop="datePublished">
-								{{$article->created_at->format("Y-m-d")}}
-							</span>
+							<meta itemprop="datePublished" content="{{$article->created_at->format('Y/m/d')}}">
+							<meta itemprop="dateModified" content="{{$article->updated_at->format('Y-m-d')}}">
 							<span class="cat-domain" itemprop="author">
 								@php
 								echo parse_url($article->url, PHP_URL_HOST);
@@ -217,8 +219,11 @@
                     @foreach(\App\Article::latest()->take(5)->cursor() as $article)
                     <li class="list-group-item"  itemscope itemtype="http://schema.org/Article">
                     	<div class="col-xs-3 thumbnail">
-                    		<a href="{{$article->ampPath()}}">
-                    			<amp-img src="{{$article->thumbnailPath()}}"  width="80" height="80" layout="responsive" alt="{{$article->title}}" itemprop="image"></amp-img>
+                    		<a href="{{$article->ampPath()}}"  itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                    			<amp-img src="{{$article->thumbnailPath()}}"  width="80" height="80" layout="responsive" alt="{{$article->title}}"></amp-img>
+                    			<meta itemprop="url" content="{{$article->thumbnailPath()}}">
+                    			<meta itemprop="width" content="80">
+                    			<meta itemprop="height" content="80">
                     		</a>
                     	</div>
                     	<div class="col-xs-9 title">
