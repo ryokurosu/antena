@@ -20,6 +20,11 @@
     <div class="thumbnail-wrap">
       <img src="{{$detail->imagePath()}}" alt="{{$detail->title}}" itemprop="image">
     </div>
+    <span class="cat-domain" itemprop="author">
+        @php
+        echo parse_url($detail->url, PHP_URL_HOST);
+        @endphp
+      </span>
     <span itemprop="publisher" itemscope="itemscope" itemtype='https://schema.org/Organization'>
       <meta itemprop="url" content="{{config('app.url')}}">
       <meta itemprop="name" content="{{config('app.name')}}">
