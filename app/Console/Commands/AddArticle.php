@@ -114,6 +114,9 @@ class AddArticle extends Command
        }
      });
 
+       if($description == ""){
+        $description = "この記事には説明文はありません。";
+       }
 
        $imageUrl = strtok($imageUrl, '?');
        $image = Image::make(file_get_contents($imageUrl));
