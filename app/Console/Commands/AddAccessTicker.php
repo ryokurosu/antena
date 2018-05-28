@@ -39,11 +39,6 @@ class AddAccessTicker extends Command
     {
         $time_start = microtime(true);
         $count = 0;
-        foreach(\App\Article::where('description',"")->cursor() as $article){
-            $article->description = "この記事には説明文はありません。";
-            $article->save();
-            echo "|";
-        }
         \App\Article::orderBy('created_at','desc')->take(10000)->chunk(1000,function($articles) use (&$count){
             foreach($articles as $v){
                 $v->increment('view');
