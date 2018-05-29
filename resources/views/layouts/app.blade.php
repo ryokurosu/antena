@@ -118,7 +118,7 @@
                       </div> -->
                       <ul class="list-group">
                       	<li class="list-group-item active">人気記事</li>
-                      	@foreach(\App\Article::popular()->take(5)->cursor() as $article)
+                      	@foreach(\App\Article::popular()->take(5)->get() as $article)
                       	@if($loop->iteration == 1)
                       	<li class="list-group-item">
                       		<div class="col-xs-3 thumbnail">
@@ -249,7 +249,7 @@
                         </div>
                     -->
                     <li class="list-group-item active">新着記事</li>
-                    @foreach(\App\Article::latest()->take(5)->cursor() as $article)
+                    @foreach(\App\Article::latest()->take(5)->get() as $article)
                     <li class="list-group-item" itemscope itemtype="http://schema.org/Article">
                     	<div class="col-xs-3 thumbnail">
                     		<a href="{{$article->path()}}">
@@ -305,7 +305,7 @@
                 	<li class="list-group-item active">タグ</li>
                 </ul>
                 <div id="tag-area">
-                	@foreach(\App\Word::inRandomOrder()->take(50)->cursor() as $word)
+                	@foreach(\App\Word::inRandomOrder()->take(50)->get() as $word)
                 	<a class="tag" href="{{$word->path()}}">{{$word->text}}</a>
                 	@endforeach
                 </div>

@@ -39,7 +39,7 @@ class ImageResizer extends Command
      */
     public function handle()
     {
-        foreach(\App\Article::orderBy('created_at','desc')->take(3000)->cursor() as $a){
+        foreach(\App\Article::orderBy('created_at','desc')->take(3000)->get() as $a){
             $thumbnail = $a->thumbnail;
             if(\File::exists(public_patH('images/'.$thumbnail))){
                 echo "true";

@@ -51,14 +51,14 @@ class ArticleMaintenance extends Command
             }
             $article->delete();
         }
-        foreach(Article::cursor() as $a){
-            $thumbnail = $a->thumbnail;
-            if(\File::exists(public_path('images/'.$thumbnail))){
-                // echo "true";
-            }else{
-              $a->fill(['thumbnail' => 'noimage.jpg'])->save();
-              // echo "|";
-          }
-      }
+      //   foreach(Article::cursor() as $a){
+      //       $thumbnail = $a->thumbnail;
+      //       if(\File::exists(public_path('images/'.$thumbnail))){
+      //           // echo "true";
+      //       }else{
+      //         $a->fill(['thumbnail' => 'noimage.jpg'])->save();
+      //         // echo "|";
+      //     }
+      // }
   }
 }
