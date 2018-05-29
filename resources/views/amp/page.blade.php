@@ -40,9 +40,6 @@
       <p>
         <a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">[PR]【最新版】病院にいる9割の医者が知らないアトピー完治のコツを公開！？</a>
       </p>
-      <p>
-        <a href="https://uranai-cafe.jp/animal/result/1990/1/1" rel="nofollow" target="_blank">[PR]無料でできる動物キャラ占い。あなたの性格・恋愛傾向・運勢・他の人との相性をすべて無料で診断できます。</a>
-      </p>
     </div>
     <div class="meta-wrap" itemprop="headline">
       <p>{{$detail->description}}</p>
