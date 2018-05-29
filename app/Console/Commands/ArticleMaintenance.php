@@ -34,7 +34,7 @@ class ArticleMaintenance extends Command
     public function __construct()
     {
       parent::__construct();
-  }
+    }
 
     /**
      * Execute the console command.
@@ -43,22 +43,26 @@ class ArticleMaintenance extends Command
      */
     public function handle()
     {
-        $one_month = date('Y-m-d', strtotime("-2 month"));
-        $articles = Article::whereDate('updated_at','<',$one_month)->where('view','<',1000)->get();
-        foreach($articles as $article){
-            foreach($article->twitters as $tweet){
-                $tweet->delete();
-            }
-            $article->delete();
+      $one_month = date('Y-m-d', strtotime("-2 month"));
+      $articles = Article::whereDate('updated_at','<',$one_month)->where('view','<',1000)->get();
+      foreach($articles as $article){
+        foreach($article->twitters as $tweet){
+          $tweet->delete();
         }
-      //   foreach(Article::cursor() as $a){
-      //       $thumbnail = $a->thumbnail;
-      //       if(\File::exists(public_path('images/'.$thumbnail))){
-      //           // echo "true";
-      //       }else{
-      //         $a->fill(['thumbnail' => 'noimage.jpg'])->save();
-      //         // echo "|";
-      //     }
-      // }
+        $article->delete();
+      }
+      \App\Article::where('thumbnail','!=','noimage.jpg')->chunk(10000,function($articles){
+        foreach($articles as $a){
+         $thumbnail = $a->thumbnail;
+         if(\File::exists(public_path('images/'.$thumbnail))){
+                // echo "true";
+         }else{
+          $a->fill(['thumbnail' => 'noimage.jpg'])->save();
+              // echo "|";
+        }
+      }
+    });
+
+    }
   }
 }
