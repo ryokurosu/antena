@@ -62,7 +62,5 @@ class ArticleMaintenance extends Command
         }
       }
     });
-
     }
-  }
 }
