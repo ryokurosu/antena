@@ -68,14 +68,10 @@ public function page(Request $request,$id){
 
     $article = Article::findOrFail($id);
     $article->increment('view',rand(1,3));
-    $twitters = Twitter::where('article_id',$id)->inRandomOrder()->take(5)->get();
-    $articles = Article::where('word_id',$article->word->id)->take(10)->get();
 
     $ret = [
         'canonical_url' => $canonical_url,
         'detail' => $article,
-        'articles' => $articles,
-        'twitters' => $twitters
     ];
     if($is_amp) {
         return view('amp.page',$ret);

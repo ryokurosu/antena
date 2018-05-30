@@ -40,6 +40,9 @@
       <p>
         <a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">[PR]【最新版】病院にいる9割の医者が知らないアトピー完治のコツを公開！？</a>
       </p>
+      <p>
+        <a target="_blank" href="https://www.amazon.co.jp/b?_encoding=UTF8&tag=matome07f-22&linkCode=ur2&linkId=2eab754447a4631cc40220ba5e4bc5b3&camp=247&creative=1211&node=466282">【PR】今、TwitterやFacebookでみんなが読んでるビジネス書籍</a>
+      </p>
     </div>
     <div class="meta-wrap" itemprop="headline">
       <p>{{$detail->description}}</p>
@@ -49,15 +52,6 @@
       <div class="text-center">
         @yield('link-ad')
       </div>
-      <p>
-        <a href="https://koikatsu.mykoi.jp/" rel="nofollow" target="_blank">[PR][無料]恋愛や婚活に悩める女性がいい出会いを得るために今すぐ見るべきサイトはこちら</a>
-      </p>
-      <p>
-        <a href="https://kaso-trade.com/" rel="nofollow" target="_blank">[PR][無料]仮想通貨って結局稼げるの！？初心者が仮想通貨投資で利益を出す方法まとめ</a>
-      </p>
-      <p>
-        <a href="http://daigakuzyuken-pro.com/" rel="nofollow" target="_blank">[PR]あの「受験の神様」も使っている勉強法を難関大学合格者が毎週更新中</a>
-      </p>
     </div>
     <div id="tweet-list">
       <ul class="list-group noback">
@@ -73,16 +67,11 @@
               <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">{{'@mama_nerse'}}</a></p>
               <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</a></p>
             </li>
-            @foreach($twitters as $tweet)
-            <li class="list-group-item">
-              <p>{{'@'}}{{$tweet->user_id}}</p>
-              <p>{{$tweet->text}}</p>
-              <span class="time">{{$tweet->updated_at->format('Y/n/j H:i:s')}}</span>
-            </li>
-            @endforeach
           </ul>
         </div>
-
+        <p>
+          <a target="_blank" href="https://www.amazon.co.jp/b?_encoding=UTF8&tag=matome07f-22&linkCode=ur2&linkId=2eab754447a4631cc40220ba5e4bc5b3&camp=247&creative=1211&node=466282">【PR】今、TwitterやFacebookでみんなが読んでるビジネス書籍</a>
+        </p>
         <div class="meta-wrap block">
           <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
         </div>

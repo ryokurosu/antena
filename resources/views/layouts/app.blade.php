@@ -248,52 +248,6 @@
                           </center>
                         </div>
                     -->
-                    <li class="list-group-item active">新着記事</li>
-                    @foreach(\App\Article::latest()->take(5)->get() as $article)
-                    <li class="list-group-item" itemscope itemtype="http://schema.org/Article">
-                    	<div class="col-xs-3 thumbnail">
-                    		<a href="{{$article->path()}}">
-                    			<img src="{{$article->thumbnailPath()}}" alt="{{$article->title}}" itemprop="image">
-                    		</a>
-                    	</div>
-                    	<div class="col-xs-9 title">
-                    		<a href="{{$article->path()}}" itemprop="name">
-                    			{{$article->title}}
-                    		</a>
-                    		<p class="text-muted description" itemprop="headline">
-                    			@php
-                    			echo mb_strimwidth($article->description, 0, 120, '', 'utf8');
-                    			@endphp
-                    		</p>
-                    	</div>
-                    	<div class="clear"></div>
-                    	<div class="col-xs-12 cat">
-                    		<span itemprop="publisher" itemscope="itemscope" itemtype='https://schema.org/Organization'>
-                    			<meta itemprop="url" content="{{config('app.url')}}">
-                    			<meta itemprop="name" content="{{config('app.name')}}">
-                    			<span itemprop='logo' itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
-                    				<meta itemprop='url' content="{{url('/logo24.png')}}">
-                    			</span>
-                    		</span>
-                    		<span class="cat-item">
-                    			{{$article->word->text}}
-                    		</span>
-                    		<span class="cat-domain" itemprop="datePublished">
-                    			{{$article->created_at->format("Y-m-d")}}
-                    		</span>
-                    		<meta itemprop="dateModified" content="{{$article->updated_at->format('Y-m-d')}}">
-                    		<span class="cat-domain" itemprop="author">
-                    			@php
-                    			echo parse_url($article->url, PHP_URL_HOST);
-                    			@endphp
-                    		</span>
-                    		<a href="{{$article->path()}}" class="link-btn">サイトへ</a>
-                    	</div>
-                    	<span class="view">{{$article->view}} view</span>
-                    </li>
-                    @endforeach
-                </ul>
-
                     <!-- <center>
                      <a href="https://px.a8.net/svt/ejp?a8mat=2TCFED+6WVAQA+50+2HX3HT" target="_blank" rel="nofollow">
                       <img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=170221045418&wid=005&eno=01&mid=s00000000018015103000&mc=1"></a>
