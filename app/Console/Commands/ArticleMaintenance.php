@@ -43,7 +43,7 @@ class ArticleMaintenance extends Command
      */
     public function handle()
     {
-      $one_month = date('Y-m-d', strtotime("-2 month"));
+      $one_month = date('Y-m-d', strtotime("-21 day"));
       $articles = Article::whereDate('updated_at','<',$one_month)->where('view','<',1000)->get();
       foreach($articles as $article){
         foreach($article->twitters as $tweet){
