@@ -38,12 +38,12 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('ping')->cron('0 4,16 * * * *');
         $schedule->command('article:maintenance')->weekly();
-        $schedule->command('add:suggest')->cron('0 15 * * * *');
-        $schedule->command('add:article')->cron('0 */2 * * * *');
+        $schedule->command('add:suggest')->hourlyAt(15);
+        $schedule->command('get:start')->hourlyAt(2);
+        $schedule->command('add:article')->hourly();
         // $schedule->command('add:access')->cron('0 */7 * * * *');
         // $schedule->command('add:tweet')->cron('0 */9 * * * *');
-        $schedule->command('word:maintenance')->cron('0 8 */3 * * *');
-        $schedule->command('get:start')->cron('0 2 * * * *');
+        $schedule->command('word:maintenance')->wednesdays()->hourlyAt(8);
     }
 
     /**
