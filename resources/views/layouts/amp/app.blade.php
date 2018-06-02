@@ -89,7 +89,7 @@
 			<div class="col-xs-12 col-md-6" id="sidebar">
 				<ul class="list-group">
 					<li class="list-group-item active">人気記事</li>
-					@foreach(\App\Article::popular()->take(5)->get() as $article)
+					@foreach(\App\Article::popular()->take(10)->get() as $article)
 					@if($loop->iteration == 1)
 					<li class="list-group-item">
 						<div class="col-xs-3 thumbnail">
@@ -225,7 +225,7 @@
                 	<li class="list-group-item active">タグ</li>
                 </ul>
                 <div id="tag-area">
-                	@foreach(\App\Word::inRandomOrder()->take(50)->get() as $word)
+                	@foreach(\App\Word::take(500)->get() as $word)
                 	<a class="tag" href="{{$word->ampPath()}}">{{$word->text}}</a>
                 	@endforeach
                 </div>

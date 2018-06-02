@@ -40,9 +40,6 @@
       <p>
         <a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">[PR]【最新版】病院にいる9割の医者が知らないアトピー完治のコツを公開！？</a>
       </p>
-      <p>
-        <a target="_blank" href="https://www.amazon.co.jp/b?_encoding=UTF8&tag=matome07f-22&linkCode=ur2&linkId=2eab754447a4631cc40220ba5e4bc5b3&camp=247&creative=1211&node=466282">【PR】今、TwitterやFacebookでみんなが読んでるビジネス書籍</a>
-      </p>
     </div>
     <div class="meta-wrap" itemprop="headline">
       <p>{{$detail->description}}</p>
@@ -50,32 +47,42 @@
     <div class="link-wrap">
       <p class="text-center">スポンサーリンク</p>
       <div class="text-center">
-        @yield('link-ad')
+        @yield('page-ad')
       </div>
     </div>
     <div id="tweet-list">
-      <ul class="list-group noback">
-        <li class="list-group-item">
-          <p><a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">{{'@kei'}}</a></p>
-          <p>このサイト参考にしたら、アトピーが治りました。今まで夜は痒くて痒くて仕方なかったりしたのに助かった。。。<a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">http://bit.ly/2qB2KIe</p>
-          </li>
-          <li class="list-group-item">
-            <p><a href="https://xn--wdk7ak.com/subaru/" rel="nofollow" target="_blank">{{'@salesman'}}</a></p>
-            <p>営業力ないと生きていけないって知ってた？<a href="https://xn--wdk7ak.com/subaru/" rel="nofollow" target="_blank">https://xn--wdk7ak.com/subaru/</p>
-            </li>
-            <li class="list-group-item">
-              <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">{{'@mama_nerse'}}</a></p>
-              <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</a></p>
-            </li>
-          </ul>
-        </div>
-        <p>
-          <a target="_blank" href="https://www.amazon.co.jp/b?_encoding=UTF8&tag=matome07f-22&linkCode=ur2&linkId=2eab754447a4631cc40220ba5e4bc5b3&camp=247&creative=1211&node=466282">【PR】今、TwitterやFacebookでみんなが読んでるビジネス書籍</a>
-        </p>
-        <div class="meta-wrap block">
-          <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
-        </div>
-
-      </div>
+      <hr>
+      <p><a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">このサイト参考にしたら、アトピーが治りました。今まで夜は痒くて痒くて仕方なかったりしたのに助かった。。。</a></p>
+      <hr>
+      <p><a href="https://xn--wdk7ak.com/subaru/" rel="nofollow" target="_blank">営業力ないと生きていけないって知ってた？</a></p>
+      <hr>
+      @foreach(\App\Article::popular()->take(10)->get() as $article)
+      @if($loop->iteration == 1)
+      <p><a href="https://lim-jp.com/archives/449" rel="nofollow">【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...</a></p>
+      <hr>
+      @elseif($loop->iteration == 4)
+      <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow">看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...</a></p>
+      <hr>
+      @endif
+      <p><a href="{{$article->path()}}" >{{$article->title}}</a></p>
+      <hr>
+      @endforeach
     </div>
-    @endsection
+    <p class="text-center">スポンサーリンク</p>
+    <div class="text-center">
+      @yield('page-ad')
+    </div>
+    <div id="tweet-list">
+      <hr>
+      @foreach(\App\Article::latest()->take(10)->get() as $article)
+      <p><a href="{{$article->path()}}" >{{$article->title}}</a></p>
+      <hr>
+      @endforeach
+    </div>
+    <div class="meta-wrap block">
+      <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
+    </div>
+
+  </div>
+</div>
+@endsection

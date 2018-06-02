@@ -68,12 +68,10 @@ class AddArticle extends Command
           });
         } catch (Exception $e) {
           $reader->delete();
-          if(\Config::get('app.name') == 'シャドウバースまとめ'){
-            try{
-              \Artisan::call('delete:reader',['rss' => $reader->url]);
-            }catch(Exception $e){
+          try{
+            \Artisan::call('delete:reader',['rss' => $reader->url]);
+          }catch(Exception $e){
 
-            }
           }
           postToDiscord($e);
           continue;
@@ -87,6 +85,13 @@ class AddArticle extends Command
 
     }
     public function setArticle($url,$title,$word){
+
+      $one_week = date('Y-m-d', strtotime("-7 day"));
+      $article = Article::whereDate('created_at','<',$one_week)->where('url',$url)->first();
+      if($article){
+        return false;
+      }
+
 
       $article = Article::where('url',$url)->first();
       if($article){
@@ -116,27 +121,27 @@ class AddArticle extends Command
 
        if($description == ""){
         $description = "この記事には説明文はありません。";
-       }
+      }
 
-       $imageUrl = strtok($imageUrl, '?');
-       $image = Image::make(file_get_contents($imageUrl));
-       $temp = explode('.',$imageUrl);
-       $extension = $temp[count($temp) - 1];
+      $imageUrl = strtok($imageUrl, '?');
+      $image = Image::make(file_get_contents($imageUrl));
+      $temp = explode('.',$imageUrl);
+      $extension = $temp[count($temp) - 1];
 
-       $image->resize(750, null, function ($constraint) {
+      $image->resize(750, null, function ($constraint) {
         $constraint->aspectRatio();
       });
 
-       $imageName = makeRandStr(8).'.'.$extension;
-       $image->save(public_path('images/'.$imageName));
+      $imageName = makeRandStr(8).'.'.$extension;
+      $image->save(public_path('images/'.$imageName));
 
-       $image->resize(120, null, function ($constraint) {
+      $image->resize(120, null, function ($constraint) {
         $constraint->aspectRatio();
       });
 
-       $image->save(public_path('thumbnail/'.$imageName));
+      $image->save(public_path('thumbnail/'.$imageName));
 
-     }catch(Exception $e){
+    }catch(Exception $e){
       echo $e->getLine().":".$e->getMessage()."\n";
       $imageName = 'noimage.jpg';
     }
@@ -150,7 +155,7 @@ class AddArticle extends Command
       'description' => $description,
       'thumbnail' => $imageName,
     ])->save();
-    if($article->id % 2000 == 0){
+    if($article->id % 3000 == 0){
       \Artisan::call('ping');
     }
     $this->count++;

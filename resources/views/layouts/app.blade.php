@@ -73,7 +73,6 @@
 	amzn_assoc_marketplace = "amazon";
 	amzn_assoc_region = "JP";
 </script>
-<script src="//ws-fe.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&MarketPlace=JP"></script>
 </head>
 <body>
 	<div id="app">
@@ -118,7 +117,7 @@
                       </div> -->
                       <ul class="list-group">
                       	<li class="list-group-item active">人気記事</li>
-                      	@foreach(\App\Article::popular()->take(5)->get() as $article)
+                      	@foreach(\App\Article::popular()->take(10)->get() as $article)
                       	@if($loop->iteration == 1)
                       	<li class="list-group-item">
                       		<div class="col-xs-3 thumbnail">
@@ -230,7 +229,7 @@
 
                       	<div class="block text-center">
                       		<center>
-                      			<script type="text/javascript">var a8='a17022183659_2TCFED_6W9V4I_2HOM_BUB81';var rankParam='SdU06YhIRmkt9nB6RNkCQGksqmksiwiD6eaRpwhIiN_RzJSxx';var bannerType='0';var bannerKind='item.fix.kind7';var frame='1';var ranking='1';var category='性別年代';</script><script type="text/javascript" src="//rws.a8.net/rakuten/ranking.js"></script>
+                      			<script type="text/javascript">var a8='a17022183659_2TCFED_6W9V4I_2HOM_BUB81';var rankParam='AVjRGnNriDwofu4GiJwEI1wLeDwLmXmSG7.igXNrmJbihPAxx';var bannerType='1';var bannerKind='item.variable.kind2';var vertical='5';var horizontal='1';var alignment='0';var frame='0';var ranking='1';var category='性別年代';</script><script type="text/javascript" src="//rws.a8.net/rakuten/ranking.js"></script>
                       		</center>
                       	</div>
                       <!-- <div class="block">
@@ -259,7 +258,7 @@
                 	<li class="list-group-item active">タグ</li>
                 </ul>
                 <div id="tag-area">
-                	@foreach(\App\Word::inRandomOrder()->take(50)->get() as $word)
+                	@foreach(\App\Word::take(500)->get() as $word)
                 	<a class="tag" href="{{$word->path()}}">{{$word->text}}</a>
                 	@endforeach
                 </div>

@@ -25,6 +25,9 @@
       echo parse_url($detail->url, PHP_URL_HOST);
       @endphp
     </span>
+    <div class="text-center">
+      @yield('link-ad')
+    </div>
     <span itemprop="publisher" itemscope="itemscope" itemtype='https://schema.org/Organization'>
       <meta itemprop="url" content="{{config('app.url')}}">
       <meta itemprop="name" content="{{config('app.name')}}">
@@ -36,9 +39,6 @@
       <p>
         <a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">[PR]【最新版】病院にいる9割の医者が知らないアトピー完治のコツを公開！？</a>
       </p>
-      <p>
-        <a target="_blank" href="https://www.amazon.co.jp/b?_encoding=UTF8&tag=matome07f-22&linkCode=ur2&linkId=2eab754447a4631cc40220ba5e4bc5b3&camp=247&creative=1211&node=466282">【PR】今、TwitterやFacebookでみんなが読んでるビジネス書籍</a>
-      </p>
     </div>
     <div class="meta-wrap" itemprop="headline">
       <p>{{$detail->description}}</p>
@@ -46,35 +46,45 @@
     <div class="link-wrap">
       <p class="text-center">スポンサーリンク</p>
       <div class="text-center">
-        @yield('link-ad')
+        @yield('page-ad')
       </div>
     </div>
     <div class="block text-center">
-      <script type="text/javascript">var a8='a17022183659_2TCG6P_ES9MOI_249K_BUB81';var rankParam='yH-IFKjwrem0z_GDFK-8l2mCo2dJjBqDAf-7Flj0E2GFE_lBW7iJXch2kHW0rBqDAf-7Flj0E2GFE_lBW7lYCcyxx';var trackingParam='bTDnieXAvfLTnHw-iB5-iHLHv7NV3BNer_EWrQhxx';var bannerType='0';var bannerKind='item.fix.kind7';var frame='1';var ranking='1';var category='本';</script><script type="text/javascript" src="//amz-ad.a8.net/amazon/amazon_ranking.js"></script>
-    </div>
-    <div id="tweet-list">
-      <ul class="list-group noback">
-        <li class="list-group-item">
-          <p><a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">{{'@kei'}}</a></p>
-          <p>このサイト参考にしたら、アトピーが治りました。今まで夜は痒くて痒くて仕方なかったりしたのに助かった。。。<a style="text-decoration: underline;" href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">http://bit.ly/2qB2KIe</p>
-          </li>
-          <li class="list-group-item">
-            <p><a href="https://xn--wdk7ak.com/subaru/" rel="nofollow" target="_blank">{{'@salesman'}}</a></p>
-            <p>営業力ないと生きていけないって知ってた？<a style="text-decoration: underline;" href="https://xn--wdk7ak.com/subaru/" rel="nofollow" target="_blank">https://xn--wdk7ak.com/subaru/</p>
-            </li>
-            <li class="list-group-item">
-              <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">{{'@mama_nerse'}}</a></p>
-              <p><a style="text-decoration: underline;" href="https://masakuraudo2.com/archives/2051" rel="nofollow" target="_blank">看護師・介護士のセクハラ被害の実態...</a></p>
-            </li>
-          </ul>
-        </div>
-        <div class="block text-center">
-          <script type="text/javascript">var a8='a17022183659_2TCG6P_ES9MOI_249K_BUB81';var rankParam='9w6v_OBAZ5yqYtuU_O6P04yHm4I.B38U216-_0BqQ4u_Qt0OHW03HWpuHU_U2w6PoOBq6OgaXwgP_Sy3q-0OK-p9e-0zx';var trackingParam='XNaI2BzF6lZNI8Pp2O3p28Z864nyROnB9weo95Yxx';var bannerType='0';var bannerKind='item.fix.kind7';var frame='1';var ranking='1';var category='食品＆飲料';</script><script type="text/javascript" src="//amz-ad.a8.net/amazon/amazon_ranking.js"></script>
-        </div>
-        <div class="meta-wrap block">
-          <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
-        </div>
+     <script type="text/javascript">var a8='a17022183659_2TCFED_6W9V4I_2HOM_BUB81';var rankParam='YU_20rufc.zNOqo0cCz79Rz84.z8a6aF0WHcJ6ufaCvcnEYxx';var bannerType='1';var bannerKind='item.variable.kind2';var vertical='5';var horizontal='1';var alignment='0';var frame='0';var ranking='1';var category='性別年代';</script><script type="text/javascript" src="//rws.a8.net/rakuten/ranking.js"></script>
+   </div>
+   <div id="tweet-list">
+    <hr>
+    <p><a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">このサイト参考にしたら、アトピーが治りました。今まで夜は痒くて痒くて仕方なかったりしたのに助かった。。。</a></p>
+    <hr>
+    <p><a href="https://xn--wdk7ak.com/subaru/" rel="nofollow" target="_blank">営業力ないと生きていけないって知ってた？</a></p>
+    <hr>
+    @foreach(\App\Article::popular()->take(10)->get() as $article)
+    @if($loop->iteration == 1)
+    <p><a href="https://lim-jp.com/archives/449" rel="nofollow">【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...</a></p>
+    <hr>
+    @elseif($loop->iteration == 4)
+    <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow">看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...</a></p>
+    <hr>
+    @endif
+    <p><a href="{{$article->path()}}" >{{$article->title}}</a></p>
+    <hr>
+    @endforeach
+  </div>
+  <div class="block text-center">
+    <script type="text/javascript">rakuten_affiliateId="0ea62065.34400275.0ea62066.204f04c0";rakuten_items="ctsmatch";rakuten_genreId="0";rakuten_recommend="on";rakuten_design="slide";rakuten_size="300x160";rakuten_target="_blank";rakuten_border="on";rakuten_auto_mode="on";rakuten_adNetworkId="a8Net";rakuten_adNetworkUrl="https%3A%2F%2Frpx.a8.net%2Fsvt%2Fejp%3Fa8mat%3D2TCFED%2B6W9V4I%2B2HOM%2BBS629%26rakuten%3Dy%26a8ejpredirect%3D";rakuten_pointbackId="a17022183659_2TCFED_6W9V4I_2HOM_BS629";rakuten_mediaId="20011816";</script><script type="text/javascript" src="//xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js"></script>
+    <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=2TCFED+6W9V4I+2HOM+BS629" alt="">
+  </div>
+  <div id="tweet-list">
+    <hr>
+    @foreach(\App\Article::latest()->take(10)->get() as $article)
+    <p><a href="{{$article->path()}}" >{{$article->title}}</a></p>
+    <hr>
+    @endforeach
+  </div>
+  <div class="meta-wrap block">
+    <p><center><a href="{{$detail->url}}" class="btn btn-primary" rel="nofollow" target="_blank">記事を読む</a></center></p>
+  </div>
 
-      </div>
-    </div>
-    @endsection
+</div>
+</div>
+@endsection
