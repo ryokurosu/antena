@@ -56,7 +56,7 @@ class AddArticle extends Command
         try {
           $client = new Client();
           $sitemap = $client->request('GET', $reader->url);
-          $sitemap->filter('item')->each(function($node) use ($words) {
+          $sitemap->filter('item')->each(function($node) use ($words,$one_week) {
             $title = $node->filter('title')->text();
             $url = $node->filter('link')->text();
             if(!Article::whereDate('created_at','<',$one_week)->where('url',$url)->first()){
