@@ -18,6 +18,7 @@ cd ..
 ~/opt/bin/git submodule foreach git pull origin master
 ~/opt/bin/git submodule update
 /usr/bin/php7.1 artisan config:clear
+/usr/bin/php7.1 artisan get:start
 filepublic=${filename:7}
 cd ..
 cd $filepublic
