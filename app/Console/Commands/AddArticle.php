@@ -70,12 +70,13 @@ class AddArticle extends Command
             }
           });
         } catch (Exception $e) {
-          $reader->delete();
-          try{
-            \Artisan::call('delete:reader',['rss' => $reader->url]);
-          }catch(Exception $e){
+          echo $e->getMessage();
+          // $reader->delete();
+          // try{
+          //   \Artisan::call('delete:reader',['rss' => $reader->url]);
+          // }catch(Exception $e){
 
-          }
+          // }
           postToDiscord($e);
           continue;
         }
@@ -88,11 +89,6 @@ class AddArticle extends Command
 
     }
     public function setArticle($url,$title,$word){
-
-
-      if($article){
-        return false;
-      }
 
 
       $article = Article::where('url',$url)->first();

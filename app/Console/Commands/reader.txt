@@ -50,7 +50,6 @@ https://headlines.yahoo.co.jp/rss/qbiz-dom.xml
 https://headlines.yahoo.co.jp/rss/wordleaf-dom.xml
 https://headlines.yahoo.co.jp/rss/tokyomx-dom.xml
 https://headlines.yahoo.co.jp/rss/tvk-dom.xml
-https://headlines.yahoo.co.jp/rss/withnews-dom.xml
 https://headlines.yahoo.co.jp/rss/asahik-dom.xml
 https://headlines.yahoo.co.jp/rss/asahibc-dom.xml
 https://headlines.yahoo.co.jp/rss/asiap-dom.xml
@@ -175,7 +174,6 @@ https://headlines.yahoo.co.jp/rss/agrinews-bus.xml
 https://headlines.yahoo.co.jp/rss/newswitch-bus.xml
 https://headlines.yahoo.co.jp/rss/socra-bus.xml
 https://headlines.yahoo.co.jp/rss/it_nlab-bus.xml
-https://headlines.yahoo.co.jp/rss/norimono-bus.xml
 https://headlines.yahoo.co.jp/rss/huffpost-bus.xml
 https://headlines.yahoo.co.jp/rss/ffield-bus.xml
 https://headlines.yahoo.co.jp/rss/bengocom-bus.xml
@@ -243,7 +241,6 @@ https://headlines.yahoo.co.jp/rss/trendnewsn-c_ent.xml
 https://headlines.yahoo.co.jp/rss/nishinp-c_ent.xml
 https://headlines.yahoo.co.jp/rss/nishispo-c_ent.xml
 https://headlines.yahoo.co.jp/rss/nkgendai-c_ent.xml
-https://headlines.yahoo.co.jp/rss/nksports-c_ent.xml
 https://headlines.yahoo.co.jp/rss/nshaberu-c_ent.xml
 https://headlines.yahoo.co.jp/rss/it_nlab-c_ent.xml
 https://headlines.yahoo.co.jp/rss/piaeiga-c_ent.xml
@@ -279,7 +276,6 @@ https://headlines.yahoo.co.jp/rss/at_s-c_spo.xml
 https://headlines.yahoo.co.jp/rss/storyfulv-c_spo.xml
 https://headlines.yahoo.co.jp/rss/ibaraki-c_spo.xml
 https://headlines.yahoo.co.jp/rss/gbr-c_spo.xml
-https://headlines.yahoo.co.jp/rss/okinawat-c_spo.xml
 https://headlines.yahoo.co.jp/rss/rcg-c_spo.xml
 https://headlines.yahoo.co.jp/rss/autoconen-c_spo.xml
 https://headlines.yahoo.co.jp/rss/kana-c_spo.xml
@@ -288,7 +284,6 @@ https://headlines.yahoo.co.jp/rss/gekisaka-c_spo.xml
 https://headlines.yahoo.co.jp/rss/koukousei-c_spo.xml
 https://headlines.yahoo.co.jp/rss/alba-c_spo.xml
 https://headlines.yahoo.co.jp/rss/gdo-c_spo.xml
-https://headlines.yahoo.co.jp/rss/saitama-c_spo.xml
 https://headlines.yahoo.co.jp/rss/saga-c_spo.xml
 https://headlines.yahoo.co.jp/rss/san-c_spo.xml
 https://headlines.yahoo.co.jp/rss/sanspo-c_spo.xml
@@ -300,7 +295,6 @@ https://headlines.yahoo.co.jp/rss/pia-c_spo.xml
 https://headlines.yahoo.co.jp/rss/chibatele-c_spo.xml
 https://headlines.yahoo.co.jp/rss/chibach-c_spo.xml
 https://headlines.yahoo.co.jp/rss/chibatopi-c_spo.xml
-https://headlines.yahoo.co.jp/rss/chosun-c_spo.xml
 https://headlines.yahoo.co.jp/rss/asapostv-c_spo.xml
 https://headlines.yahoo.co.jp/rss/tvtokyos-c_spo.xml
 https://headlines.yahoo.co.jp/rss/dtohoku-c_spo.xml
@@ -346,7 +340,6 @@ https://headlines.yahoo.co.jp/rss/zdn_ep-c_sci.xml
 https://headlines.yahoo.co.jp/rss/biz_it_mk-c_sci.xml
 https://headlines.yahoo.co.jp/rss/jct-c_sci.xml
 https://headlines.yahoo.co.jp/rss/sh_mar-c_sci.xml
-https://headlines.yahoo.co.jp/rss/it_monoist-c_sci.xml
 https://headlines.yahoo.co.jp/rss/biz_rwj-c_sci.xml
 https://headlines.yahoo.co.jp/rss/scan-c_sci.xml
 https://headlines.yahoo.co.jp/rss/sensors-c_sci.xml
@@ -358,7 +351,6 @@ https://headlines.yahoo.co.jp/rss/wordleaf-c_sci.xml
 https://headlines.yahoo.co.jp/rss/cyberir-c_sci.xml
 https://headlines.yahoo.co.jp/rss/webtan-c_sci.xml
 https://headlines.yahoo.co.jp/rss/withnews-c_sci.xml
-https://headlines.yahoo.co.jp/rss/zdnet-c_sci.xml
 https://headlines.yahoo.co.jp/rss/asahik-c_sci.xml
 https://headlines.yahoo.co.jp/rss/ascii-c_sci.xml
 https://headlines.yahoo.co.jp/rss/zdn_ait-c_sci.xml
@@ -375,7 +367,6 @@ https://headlines.yahoo.co.jp/rss/houdouk-c_sci.xml
 https://headlines.yahoo.co.jp/rss/nbn-c_sci.xml
 https://headlines.yahoo.co.jp/rss/rps-c_sci.xml
 https://headlines.yahoo.co.jp/rss/all-c_life.xml
-https://headlines.yahoo.co.jp/rss/nallabout-c_life.xml
 https://headlines.yahoo.co.jp/rss/bouncyv-c_life.xml
 https://headlines.yahoo.co.jp/rss/bfj-c_life.xml
 https://headlines.yahoo.co.jp/rss/cinranet-c_life.xml
@@ -411,10 +402,8 @@ https://headlines.yahoo.co.jp/rss/ffield-c_life.xml
 https://headlines.yahoo.co.jp/rss/benesseks-c_life.xml
 https://headlines.yahoo.co.jp/rss/bengocom-c_life.xml
 https://headlines.yahoo.co.jp/rss/houdouk-c_life.xml
-https://headlines.yahoo.co.jp/rss/manetatsun-c_life.xml
 https://headlines.yahoo.co.jp/rss/minnagolf-c_life.xml
 https://headlines.yahoo.co.jp/rss/reallive-c_life.xml
-https://headlines.yahoo.co.jp/rss/resemom-c_life.xml
 https://headlines.yahoo.co.jp/rss/all-loc.xml
 https://headlines.yahoo.co.jp/rss/bbcbiwakov-loc.xml
 https://headlines.yahoo.co.jp/rss/cbc-loc.xml
@@ -541,7 +530,6 @@ https://headlines.yahoo.co.jp/rss/oriconbiz-all.xml
 https://headlines.yahoo.co.jp/rss/biz_coacha-all.xml
 https://headlines.yahoo.co.jp/rss/cyclespo-all.xml
 https://headlines.yahoo.co.jp/rss/cyzoz-all.xml
-https://headlines.yahoo.co.jp/rss/sdigestw-all.xml
 https://headlines.yahoo.co.jp/rss/seraijp-all.xml
 https://headlines.yahoo.co.jp/rss/the_tv-all.xml
 https://headlines.yahoo.co.jp/rss/scafe-all.xml
@@ -558,7 +546,6 @@ https://headlines.yahoo.co.jp/rss/theanswer-all.xml
 https://headlines.yahoo.co.jp/rss/jbpressz-all.xml
 https://headlines.yahoo.co.jp/rss/jindepth-all.xml
 https://headlines.yahoo.co.jp/rss/jspa-all.xml
-https://headlines.yahoo.co.jp/rss/gqjapan-all.xml
 https://headlines.yahoo.co.jp/rss/suitsw-all.xml
 https://headlines.yahoo.co.jp/rss/seijiyama-all.xml
 https://headlines.yahoo.co.jp/rss/sentaku-all.xml
@@ -599,7 +586,6 @@ https://headlines.yahoo.co.jp/rss/forbes-all.xml
 http://rss.itmedia.co.jp/rss/2.0/news_bursts.xml
 http://rss.itmedia.co.jp/rss/1.0/news_bursts.xml
 http://rss.itmedia.co.jp/rss/0.91/news_bursts.xml
-http://rss.itmedia.co.jp/rss/2.0/news_domestic.xml
 http://rss.itmedia.co.jp/rss/1.0/news_domestic.xml
 http://rss.itmedia.co.jp/rss/0.91/news_domestic.xml
 http://rss.itmedia.co.jp/rss/2.0/news_foreign.xml
@@ -660,14 +646,12 @@ https://news.yahoo.co.jp/polls/rss.xml
 https://news.yahoo.co.jp/polls/domestic/rss.xml
 https://news.yahoo.co.jp/polls/entertainment/rss.xml
 https://news.yahoo.co.jp/polls/sports/rss.xml
-https://news.yahoo.co.jp/polls/life/rss.xml
 https://news.yahoo.co.jp/polls/easy/rss.xml
 https://news.yahoo.co.jp/polls/other/rss.xml
 https://news.yahoo.co.jp/byline/rss/all.xml
 http://rss.itmedia.co.jp/rss/2.0/news_bursts.xml
 http://rss.itmedia.co.jp/rss/1.0/news_bursts.xml
 http://rss.itmedia.co.jp/rss/0.91/news_bursts.xml
-http://rss.itmedia.co.jp/rss/2.0/news_domestic.xml
 http://rss.itmedia.co.jp/rss/1.0/news_domestic.xml
 http://rss.itmedia.co.jp/rss/0.91/news_domestic.xml
 http://rss.itmedia.co.jp/rss/2.0/news_foreign.xml
@@ -1375,7 +1359,6 @@ http://japanese.engadget.com/
 http://gori.me/
 http://nlab.itmedia.co.jp/
 http://liginc.co.jp/
-
 https://thinkit.co.jp/
 http://www.kayac.com/
 http://dengekionline.com/
@@ -1429,7 +1412,6 @@ http://www.gameman.jp/rss/ritem/3ds.xml
 http://feeds.lifehacker.jp/rss/lifehacker/index.xml
 http://www.huffingtonpost.jp/rss/index.xml
 http://portal.nifty.com/rss/headline.rdf
-https://rocketnews24.com/feed/
 https://digiday.jp/feed/
 http://blog.livedoor.jp/dqnplus/index.rdf
 http://gigazine.net/news/rss_2.0/
@@ -1483,7 +1465,6 @@ https://headlines.yahoo.co.jp/rss/qbiz-dom.xml
 https://headlines.yahoo.co.jp/rss/wordleaf-dom.xml
 https://headlines.yahoo.co.jp/rss/tokyomx-dom.xml
 https://headlines.yahoo.co.jp/rss/tvk-dom.xml
-https://headlines.yahoo.co.jp/rss/withnews-dom.xml
 https://headlines.yahoo.co.jp/rss/asahik-dom.xml
 https://headlines.yahoo.co.jp/rss/asiap-dom.xml
 https://headlines.yahoo.co.jp/rss/storyfulv-dom.xml
@@ -1605,7 +1586,6 @@ https://headlines.yahoo.co.jp/rss/agrinews-bus.xml
 https://headlines.yahoo.co.jp/rss/newswitch-bus.xml
 https://headlines.yahoo.co.jp/rss/socra-bus.xml
 https://headlines.yahoo.co.jp/rss/it_nlab-bus.xml
-https://headlines.yahoo.co.jp/rss/norimono-bus.xml
 https://headlines.yahoo.co.jp/rss/huffpost-bus.xml
 https://headlines.yahoo.co.jp/rss/ffield-bus.xml
 https://headlines.yahoo.co.jp/rss/bengocom-bus.xml
@@ -1671,7 +1651,6 @@ https://headlines.yahoo.co.jp/rss/trendnewsn-c_ent.xml
 https://headlines.yahoo.co.jp/rss/nishinp-c_ent.xml
 https://headlines.yahoo.co.jp/rss/nishispo-c_ent.xml
 https://headlines.yahoo.co.jp/rss/nkgendai-c_ent.xml
-https://headlines.yahoo.co.jp/rss/nksports-c_ent.xml
 https://headlines.yahoo.co.jp/rss/nshaberu-c_ent.xml
 https://headlines.yahoo.co.jp/rss/it_nlab-c_ent.xml
 https://headlines.yahoo.co.jp/rss/piaeiga-c_ent.xml
@@ -1708,17 +1687,14 @@ https://headlines.yahoo.co.jp/rss/at_s-c_spo.xml
 https://headlines.yahoo.co.jp/rss/storyfulv-c_spo.xml
 https://headlines.yahoo.co.jp/rss/ibaraki-c_spo.xml
 https://headlines.yahoo.co.jp/rss/gbr-c_spo.xml
-https://headlines.yahoo.co.jp/rss/okinawat-c_spo.xml
 https://headlines.yahoo.co.jp/rss/rcg-c_spo.xml
 https://headlines.yahoo.co.jp/rss/autoconen-c_spo.xml
 https://headlines.yahoo.co.jp/rss/kana-c_spo.xml
 https://headlines.yahoo.co.jp/rss/kanpara-c_spo.xml
-https://headlines.yahoo.co.jp/rss/kurumans-c_spo.xml
 https://headlines.yahoo.co.jp/rss/gekisaka-c_spo.xml
 https://headlines.yahoo.co.jp/rss/koukousei-c_spo.xml
 https://headlines.yahoo.co.jp/rss/alba-c_spo.xml
 https://headlines.yahoo.co.jp/rss/gdo-c_spo.xml
-https://headlines.yahoo.co.jp/rss/saitama-c_spo.xml
 https://headlines.yahoo.co.jp/rss/saga-c_spo.xml
 https://headlines.yahoo.co.jp/rss/san-c_spo.xml
 https://headlines.yahoo.co.jp/rss/sanspo-c_spo.xml
@@ -1730,7 +1706,6 @@ https://headlines.yahoo.co.jp/rss/pia-c_spo.xml
 https://headlines.yahoo.co.jp/rss/chibatele-c_spo.xml
 https://headlines.yahoo.co.jp/rss/chibach-c_spo.xml
 https://headlines.yahoo.co.jp/rss/chibatopi-c_spo.xml
-https://headlines.yahoo.co.jp/rss/chosun-c_spo.xml
 https://headlines.yahoo.co.jp/rss/asapostv-c_spo.xml
 https://headlines.yahoo.co.jp/rss/tvtokyos-c_spo.xml
 https://headlines.yahoo.co.jp/rss/dtohoku-c_spo.xml
@@ -1774,7 +1749,6 @@ https://headlines.yahoo.co.jp/rss/zdn_ep-c_sci.xml
 https://headlines.yahoo.co.jp/rss/biz_it_mk-c_sci.xml
 https://headlines.yahoo.co.jp/rss/jct-c_sci.xml
 https://headlines.yahoo.co.jp/rss/sh_mar-c_sci.xml
-https://headlines.yahoo.co.jp/rss/it_monoist-c_sci.xml
 https://headlines.yahoo.co.jp/rss/biz_rwj-c_sci.xml
 https://headlines.yahoo.co.jp/rss/scan-c_sci.xml
 https://headlines.yahoo.co.jp/rss/sensors-c_sci.xml
@@ -1786,7 +1760,6 @@ https://headlines.yahoo.co.jp/rss/wordleaf-c_sci.xml
 https://headlines.yahoo.co.jp/rss/cyberir-c_sci.xml
 https://headlines.yahoo.co.jp/rss/webtan-c_sci.xml
 https://headlines.yahoo.co.jp/rss/withnews-c_sci.xml
-https://headlines.yahoo.co.jp/rss/zdnet-c_sci.xml
 https://headlines.yahoo.co.jp/rss/asahik-c_sci.xml
 https://headlines.yahoo.co.jp/rss/ascii-c_sci.xml
 https://headlines.yahoo.co.jp/rss/zdn_ait-c_sci.xml
@@ -1802,7 +1775,6 @@ https://headlines.yahoo.co.jp/rss/it_nlab-c_sci.xml
 https://headlines.yahoo.co.jp/rss/houdouk-c_sci.xml
 https://headlines.yahoo.co.jp/rss/rps-c_sci.xml
 https://headlines.yahoo.co.jp/rss/asahibc-c_life.xml
-https://headlines.yahoo.co.jp/rss/nallabout-c_life.xml
 https://headlines.yahoo.co.jp/rss/allreview-c_life.xml
 https://headlines.yahoo.co.jp/rss/bouncyv-c_life.xml
 https://headlines.yahoo.co.jp/rss/bfj-c_life.xml
@@ -1830,7 +1802,6 @@ https://headlines.yahoo.co.jp/rss/rshingakun-c_life.xml
 https://headlines.yahoo.co.jp/rss/zeiricom-c_life.xml
 https://headlines.yahoo.co.jp/rss/socialinv-c_life.xml
 https://headlines.yahoo.co.jp/rss/tabelog-c_life.xml
-https://headlines.yahoo.co.jp/rss/dewsv-c_life.xml
 https://headlines.yahoo.co.jp/rss/tkybgmnv-c_life.xml
 https://headlines.yahoo.co.jp/rss/toushin-c_life.xml
 https://headlines.yahoo.co.jp/rss/nkgendai-c_life.xml
@@ -1840,10 +1811,8 @@ https://headlines.yahoo.co.jp/rss/ffield-c_life.xml
 https://headlines.yahoo.co.jp/rss/benesseks-c_life.xml
 https://headlines.yahoo.co.jp/rss/bengocom-c_life.xml
 https://headlines.yahoo.co.jp/rss/houdouk-c_life.xml
-https://headlines.yahoo.co.jp/rss/manetatsun-c_life.xml
 https://headlines.yahoo.co.jp/rss/minnagolf-c_life.xml
 https://headlines.yahoo.co.jp/rss/reallive-c_life.xml
-https://headlines.yahoo.co.jp/rss/resemom-c_life.xml
 https://headlines.yahoo.co.jp/rss/asahibc-loc.xml
 https://headlines.yahoo.co.jp/rss/bbcbiwakov-loc.xml
 https://headlines.yahoo.co.jp/rss/cbc-loc.xml
@@ -1978,7 +1947,6 @@ https://headlines.yahoo.co.jp/rss/oriconbiz-all.xml
 https://headlines.yahoo.co.jp/rss/biz_coacha-all.xml
 https://headlines.yahoo.co.jp/rss/cyclespo-all.xml
 https://headlines.yahoo.co.jp/rss/cyzoz-all.xml
-https://headlines.yahoo.co.jp/rss/sdigestw-all.xml
 https://headlines.yahoo.co.jp/rss/seraijp-all.xml
 https://headlines.yahoo.co.jp/rss/the_tv-all.xml
 https://headlines.yahoo.co.jp/rss/scafe-all.xml
@@ -1995,7 +1963,6 @@ https://headlines.yahoo.co.jp/rss/theanswer-all.xml
 https://headlines.yahoo.co.jp/rss/jbpressz-all.xml
 https://headlines.yahoo.co.jp/rss/jindepth-all.xml
 https://headlines.yahoo.co.jp/rss/jspa-all.xml
-https://headlines.yahoo.co.jp/rss/gqjapan-all.xml
 https://headlines.yahoo.co.jp/rss/suitsw-all.xml
 https://headlines.yahoo.co.jp/rss/seijiyama-all.xml
 https://headlines.yahoo.co.jp/rss/sentaku-all.xml
@@ -2068,7 +2035,6 @@ https://news.yahoo.co.jp/polls/rss.xml
 https://news.yahoo.co.jp/polls/domestic/rss.xml
 https://news.yahoo.co.jp/polls/entertainment/rss.xml
 https://news.yahoo.co.jp/polls/sports/rss.xml
-https://news.yahoo.co.jp/polls/life/rss.xml
 https://news.yahoo.co.jp/polls/easy/rss.xml
 https://news.yahoo.co.jp/polls/other/rss.xml
 https://news.yahoo.co.jp/byline/rss/all.xml
@@ -2088,4 +2054,3 @@ http://2ch-matome.com/rss/life.xml
 http://2ch-matome.com/rss/anime.xml
 http://2ch-matome.com/rss/adult.xml
 http://2ch-matome.com/rss/nonadult.xml
-
