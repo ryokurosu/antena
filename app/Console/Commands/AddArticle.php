@@ -50,21 +50,24 @@ class AddArticle extends Command
 
       $readers = Reader::inRandomOrder()->get();
       $words = Word::inRandomOrder()->get();
+      $one_week = date('Y-m-d', strtotime("-7 day"));
+
       foreach ($readers as $reader) {
         try {
           $client = new Client();
           $sitemap = $client->request('GET', $reader->url);
           $sitemap->filter('item')->each(function($node) use ($words) {
             $title = $node->filter('title')->text();
-            foreach($words as $w){
-              if(strpos($title,$w->text) !== false){
+            $url = $node->filter('link')->text();
+            if(!Article::whereDate('created_at','<',$one_week)->where('url',$url)->first()){
+              foreach($words as $w){
+                if(strpos($title,$w->text) !== false){
                 //'abcd'のなかに'bc'が含まれている場合
-                $url = $node->filter('link')->text();
-                $this->setArticle($url,$title,$w);
-                break;
+                  $this->setArticle($url,$title,$w);
+                  break;
+                }
               }
             }
-
           });
         } catch (Exception $e) {
           $reader->delete();
@@ -86,8 +89,7 @@ class AddArticle extends Command
     }
     public function setArticle($url,$title,$word){
 
-      $one_week = date('Y-m-d', strtotime("-7 day"));
-      $article = Article::whereDate('created_at','<',$one_week)->where('url',$url)->first();
+
       if($article){
         return false;
       }
