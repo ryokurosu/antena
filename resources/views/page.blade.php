@@ -60,7 +60,7 @@
     <hr>
     @foreach(\App\Article::popular()->take(10)->get() as $article)
     @if($loop->iteration == 1)
-    <p><a href="https://lim-jp.com/archives/449" rel="nofollow">【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...</a></p>
+    <p><a href="https://qume.life/archives/449" rel="nofollow">【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...</a></p>
     <hr>
     @elseif($loop->iteration == 4)
     <p><a href="https://masakuraudo2.com/archives/2051" rel="nofollow">看護師・介護士のセクハラ被害の実態...。実際に体を触られた例も...</a></p>

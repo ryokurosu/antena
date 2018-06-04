@@ -93,12 +93,12 @@
 					@if($loop->iteration == 1)
 					<li class="list-group-item">
 						<div class="col-xs-3 thumbnail">
-							<a href="https://lim-jp.com/archives/449">
+							<a href="https://qume.life/archives/449">
 								<amp-img src="{{url('/uydagfea.jpg')}}" width="60" height="80" alt="【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう..."></amp-img>
 							</a>
 						</div>
 						<div class="col-xs-9 title">
-							<a href="https://lim-jp.com/archives/449">
+							<a href="https://qume.life/archives/449">
 								【悲報】ローラ、ガチ乳首ポロリ動画をインスタグラムにアップしてしまう...
 							</a>
 							<p class="text-muted description">
@@ -114,10 +114,10 @@
 							</span>
 							<span class="cat-domain">
 								@php
-								echo parse_url("https://lim-jp.com/archives/449", PHP_URL_HOST);
+								echo parse_url("https://qume.life/archives/449", PHP_URL_HOST);
 								@endphp
 							</span>
-							<a href="https://lim-jp.com/archives/449" class="link-btn">サイトへ</a>
+							<a href="https://qume.life/archives/449" class="link-btn">サイトへ</a>
 						</div>
 						<span class="view">{{$article->view * 2 + 32}} view</span>
 					</li>
