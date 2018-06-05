@@ -52,6 +52,11 @@ class AddArticle extends Command
       $one_week = date('Y-m-d', strtotime("-7 day"));
 
       foreach ($readers as $reader) {
+        $time = microtime(true) - $time_start;
+        $time = number_format($time,2);
+        if(!set_time_limit(30) || $time > 10000){
+          break;
+        }
         try {
           $client = new Client();
           $sitemap = $client->request('GET', $reader->url);
@@ -67,6 +72,8 @@ class AddArticle extends Command
                 }
               }
             }
+
+
           });
         } catch (Exception $e) {
           echo $e->getMessage();
@@ -152,6 +159,7 @@ class AddArticle extends Command
       'description' => $description,
       'thumbnail' => $imageName,
     ])->save();
+    sleep(15);
     if($article->id % 3000 == 0){
       \Artisan::call('ping');
     }
