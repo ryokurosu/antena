@@ -72,6 +72,7 @@ class AddArticle extends Command
                 }
               }
             }
+            sleep(15);
 
 
           });
@@ -159,7 +160,7 @@ class AddArticle extends Command
       'description' => $description,
       'thumbnail' => $imageName,
     ])->save();
-    sleep(15);
+   
     if($article->id % 3000 == 0){
       \Artisan::call('ping');
     }
