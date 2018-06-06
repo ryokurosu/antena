@@ -53,15 +53,17 @@ class AddArticle extends Command
       $one_week = date('Y-m-d', strtotime("-7 day"));
 
       foreach ($readers as $reader) {
-        $time = microtime(true) - $time_start;
-        $time = number_format($time,2);
-        if(!set_time_limit(30) || $time > 10000){
-          break;
-        }
         try {
           $client = new Client();
           $sitemap = $client->request('GET', $reader->url);
-          $sitemap->filter('item')->each(function($node) use ($words,$one_week) {
+          $sitemap->filter('item')->each(function($node) use ($words,$one_week,$time_start) {
+
+            $time = microtime(true) - $time_start;
+            $time = number_format($time,2);
+            if(!set_time_limit(30) || $time > 10000){
+              exit(0);
+            }
+
             $title = $node->filter('title')->text();
             $url = $node->filter('link')->text();
             if(!Article::whereDate('created_at','<',$one_week)->where('url',$url)->first()){
@@ -73,7 +75,7 @@ class AddArticle extends Command
                 }
               }
             }
-            sleep(15);
+            sleep(10);
 
 
           });
@@ -161,7 +163,7 @@ class AddArticle extends Command
       'description' => $description,
       'thumbnail' => $imageName,
     ])->save();
-   
+
     if($article->id % 3000 == 0){
       \Artisan::call('ping');
     }
