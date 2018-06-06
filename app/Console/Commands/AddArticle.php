@@ -61,6 +61,7 @@ class AddArticle extends Command
             $time = microtime(true) - $time_start;
             $time = number_format($time,2);
             if(!set_time_limit(30) || $time > 10000){
+              noticeDiscord("Add {$count} articles. {$time} s");
               exit(0);
             }
 
@@ -75,7 +76,7 @@ class AddArticle extends Command
                 }
               }
             }
-            sleep(10);
+            sleep(7);
 
 
           });
