@@ -46,7 +46,7 @@ function postToDiscord($e)
 }
 
 function noticeDiscord($content){
-	$data = array("content" => date("Y/m/d H:i:s"). PHP_EOL .\Config::get('app.name').' '.\Config::get('app.url').  PHP_EOL ."```{$content}". PHP_EOL."Cron ver 1.3.4```", "username" => HOOKNAME);
+	$data = array("content" => date("Y/m/d H:i:s"). PHP_EOL .\Config::get('app.url')." ".\Config::get('app.name'). " {$content}" . PHP_EOL."Cron ver 1.4.1", "username" => HOOKNAME);
 	$curl = curl_init(WEBHOOK);
 	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
 	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
