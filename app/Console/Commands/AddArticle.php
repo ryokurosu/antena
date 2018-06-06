@@ -44,6 +44,7 @@ class AddArticle extends Command
      */
     public function handle()
     {
+      noticeDiscord('add:article:run');
       $time_start = microtime(true);
       $this->count = 0;
 

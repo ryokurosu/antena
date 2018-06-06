@@ -36,7 +36,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        noticeDiscord('schedule:run');
+        
         // $schedule->command('ping')->cron('0 4,16 * * * *');
         $schedule->command('article:maintenance')->weekly();
         $schedule->command('add:suggest')->hourlyAt(15);
