@@ -50,7 +50,7 @@ function noticeDiscord($content){
 	$temp = explode('/',$url);
 	$domain = $temp[count($temp) - 2];
 	$sub = $temp[count($temp) - 1];
-	$data = array("content" => date("H:i:s"). PHP_EOL .\Config::get('app.url')." {$domain} {$sub} ".\Config::get('app.name'). " {$content}" . PHP_EOL."Cron ver 1.4.1", "username" => HOOKNAME);
+	$data = array("content" => date("H:i:s"). PHP_EOL .\Config::get('app.url')." {$domain} {$sub} ".\Config::get('app.name'). " {$content}" . PHP_EOL."Cron ver 1.4.2", "username" => HOOKNAME);
 	$curl = curl_init(WEBHOOK);
 	curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
 	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
