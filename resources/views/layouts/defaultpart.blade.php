@@ -1,10 +1,10 @@
 @section('page-ad')
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Atenaレスポンシブ -->
+<!-- antena広告レスポンシブ -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-5105681373982866"
-     data-ad-slot="9120017835"
+     data-ad-slot="2804223597"
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});

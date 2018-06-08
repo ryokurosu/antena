@@ -58,21 +58,6 @@
 
 	gtag('config', '{{env("GA_TAG")}}');
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-	(adsbygoogle = window.adsbygoogle || []).push({
-		google_ad_client: "ca-pub-5105681373982866",
-		enable_page_level_ads: true
-	});
-</script>
-<script type="text/javascript">
-	amzn_assoc_ad_type = "link_enhancement_widget";
-	amzn_assoc_tracking_id = "matome07f-22";
-	amzn_assoc_linkid = "9173b81d40a0c623c9ba6743650b8e24";
-	amzn_assoc_placement = "";
-	amzn_assoc_marketplace = "amazon";
-	amzn_assoc_region = "JP";
-</script>
 </head>
 <body>
 	<div id="app">
@@ -227,11 +212,6 @@
                       </ul>
                       <ul class="list-group">
 
-                      	<div class="block text-center">
-                      		<center>
-                      			<script type="text/javascript">var a8='a17022183659_2TCFED_6W9V4I_2HOM_BUB81';var rankParam='AVjRGnNriDwofu4GiJwEI1wLeDwLmXmSG7.igXNrmJbihPAxx';var bannerType='1';var bannerKind='item.variable.kind2';var vertical='5';var horizontal='1';var alignment='0';var frame='0';var ranking='1';var category='性別年代';</script><script type="text/javascript" src="//rws.a8.net/rakuten/ranking.js"></script>
-                      		</center>
-                      	</div>
                       <!-- <div class="block">
                         <center>
                          <a href="https://px.a8.net/svt/ejp?a8mat=2ZGWQL+CCQWR6+50+4T650H" target="_blank" rel="nofollow">

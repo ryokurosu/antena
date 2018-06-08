@@ -49,9 +49,6 @@
         @yield('page-ad')
       </div>
     </div>
-    <div class="block text-center">
-     <script type="text/javascript">var a8='a17022183659_2TCFED_6W9V4I_2HOM_BUB81';var rankParam='YU_20rufc.zNOqo0cCz79Rz84.z8a6aF0WHcJ6ufaCvcnEYxx';var bannerType='1';var bannerKind='item.variable.kind2';var vertical='5';var horizontal='1';var alignment='0';var frame='0';var ranking='1';var category='性別年代';</script><script type="text/javascript" src="//rws.a8.net/rakuten/ranking.js"></script>
-   </div>
    <div id="tweet-list">
     <hr>
     <p><a href="http://bit.ly/2qB2KIe" rel="nofollow" target="_blank">このサイト参考にしたら、アトピーが治りました。今まで夜は痒くて痒くて仕方なかったりしたのに助かった。。。</a></p>
@@ -70,10 +67,12 @@
     <hr>
     @endforeach
   </div>
-  <div class="block text-center">
-    <script type="text/javascript">rakuten_affiliateId="0ea62065.34400275.0ea62066.204f04c0";rakuten_items="ctsmatch";rakuten_genreId="0";rakuten_recommend="on";rakuten_design="slide";rakuten_size="300x160";rakuten_target="_blank";rakuten_border="on";rakuten_auto_mode="on";rakuten_adNetworkId="a8Net";rakuten_adNetworkUrl="https%3A%2F%2Frpx.a8.net%2Fsvt%2Fejp%3Fa8mat%3D2TCFED%2B6W9V4I%2B2HOM%2BBS629%26rakuten%3Dy%26a8ejpredirect%3D";rakuten_pointbackId="a17022183659_2TCFED_6W9V4I_2HOM_BS629";rakuten_mediaId="20011816";</script><script type="text/javascript" src="//xml.affiliate.rakuten.co.jp/widget/js/rakuten_widget.js"></script>
-    <img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=2TCFED+6W9V4I+2HOM+BS629" alt="">
-  </div>
+  <div class="link-wrap">
+      <p class="text-center">スポンサーリンク</p>
+      <div class="text-center">
+        @yield('link-ad')
+      </div>
+    </div>
   <div id="tweet-list">
     <hr>
     @foreach(\App\Article::latest()->take(10)->get() as $article)

@@ -70,7 +70,7 @@
     </div>
     <p class="text-center">スポンサーリンク</p>
     <div class="text-center">
-      @yield('page-ad')
+      @yield('link-ad')
     </div>
     <div id="tweet-list">
       <hr>
